@@ -1,0 +1,4 @@
+克隆仓库：git clone uri
+添加变更: git add .
+提交   git commit -m 'msg'
+推送变更：git push origin master
