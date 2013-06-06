@@ -3,7 +3,7 @@
 
 表结构设计：
 	tallyType(分类表):包括tid(int)，tname(varchar),torder(int)字段。
-	consumeRecord(消费记录表)：包括cid(uuid),ctype(reference tallyType.tid),csum(bigerNum),cdate(date),)
+	consumeRecord(消费记录表)：包括cid(uuid),ctype(reference tallyType.tid),cname(varchar)csum(bigerNum),cdate(date),)
 
 页面设计：
 tabPanel类似。
