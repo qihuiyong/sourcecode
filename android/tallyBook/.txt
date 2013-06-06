@@ -1,0 +1,10 @@
+项目简介：
+用于个人对自己消费的记录和分类统计，了解自己的资金流向。
+
+表结构设计：
+	tallyType(分类表):包括tid(int)，tname(varchar),torder(int)字段。
+	consumeRecord(消费记录表)：包括cid(uuid),ctype(reference tallyType.tid),cname(varchar)csum(bigerNum),cdate(date),)
+
+页面设计：
+tabPanel类似。
+tab1新增消费记录，tab2记录信息展现以及统计，tab3管理分类，
