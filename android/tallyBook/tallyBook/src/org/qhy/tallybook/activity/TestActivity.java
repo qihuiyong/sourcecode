@@ -62,6 +62,7 @@ public class TestActivity extends Activity {
 					System.out.print(TypeColumns.TNAME+"====>"+cursor.getString(cursor.getColumnIndex(TypeColumns.TNAME)));
 					System.out.print(TypeColumns.TORDER+"====>"+cursor.getInt(cursor.getColumnIndex(TypeColumns.TORDER))+"\n");
 				}
+				cursor.close();
 				}
 		});
 		
@@ -75,5 +76,19 @@ public class TestActivity extends Activity {
 				TestActivity.this.deleteDatabase("test.db");
 			}
 		});
+		/**
+		 * SQLiteDatabase sqliteDatabase = dbHelper.getWritableDatabase();  
+            // 创建一个ContentValues对象  
+            ContentValues values = new ContentValues();  
+            values.put("name", "zhangsan");  
+            // 调用update方法  
+            // 第一个参数String：表名  
+            // 第二个参数ContentValues：ContentValues对象  
+            // 第三个参数String：where字句，相当于sql语句where后面的语句，？号是占位符  
+            // 第四个参数String[]：占位符的值  
+            sqliteDatabase.update("user", values, "id=?", new String[] { "1" });  
+            System.out.println("-----------update------------");  
+		 * 
+		 */
 	}
 }
