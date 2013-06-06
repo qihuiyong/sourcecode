@@ -22,9 +22,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		db.execSQL(TallyBookDatabase.CREATE_TABLE_TYPE_SQL);
 		//创建记录表
 		db.execSQL(TallyBookDatabase.CREATE_TABLE_RECORD_SQL);
+		
 	}
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		System.out.println("onUpgrade");
 	}
 
 }
