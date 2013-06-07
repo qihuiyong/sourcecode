@@ -19,9 +19,14 @@
         </activity>
         <activity 
             android:name="org.qhy.tallybook.activity.TestActivity"
-            android:label="测试Activity"
+            android:label="测试Activity">
+                         
+        </activity>
+         <activity 
+            android:name="org.qhy.tallybook.activity.TabsActivity"
+            android:label="@string/app_name"
             >
-             <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
