@@ -15,9 +15,9 @@ public class MainActivity extends FragmentActivity {
 		TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost);
 		tabHost.setup();
 
-		tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("tab1")
+		tabHost.addTab(tabHost.newTabSpec("33tab1").setIndicator("tab1111")
 				.setContent(R.id.tab1));
-		tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("tab2")
+		tabHost.addTab(tabHost.newTabSpec("33tab2").setIndicator("tab2111")
 				.setContent(R.id.tab2));
 	}
 
