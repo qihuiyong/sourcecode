@@ -5,14 +5,23 @@ import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.widget.TabHost;
 import android.widget.TabWidget;
-
+/**
+ * 应用程序主入口，使用了tab
+ * @author qihuiyong
+ *
+ */
 public class MainActivity extends FragmentActivity {
+	
+	//tabHost
+	private TabHost tabHost;
+	private TabWidget tabWidget;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-		TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost);
+		this.initViewObj();
+		
 		tabHost.setup();
 		
 		tabHost.addTab(tabHost.newTabSpec("addrecordTab_tag").setIndicator(this.getResources().getText(R.string.addrecord_tab_lable))
@@ -25,6 +34,12 @@ public class MainActivity extends FragmentActivity {
 				.setContent(R.id.type_tab));
 		tabHost.addTab(tabHost.newTabSpec("helpTab_tab").setIndicator(this.getResources().getText(R.string.help_tab_lable)).setContent(R.id.help_tab));
 	}
+	
+	private void initViewObj(){
+		tabHost = (TabHost) findViewById(android.R.id.tabhost);
+		tabWidget = (TabWidget)findViewById(android.R.id.tabs);
+	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
