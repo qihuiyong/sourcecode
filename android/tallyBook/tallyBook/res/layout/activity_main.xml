@@ -10,8 +10,8 @@
         android:orientation="vertical" >
 		<TabWidget
             android:id="@android:id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="30dp">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         </TabWidget>
         <FrameLayout
             android:id="@android:id/tabcontent"
@@ -20,16 +20,26 @@
             android:layout_weight="1"
             >
             <fragment
-                android:id="@+id/tab1"
-                android:name="org.qhy.tallybook.fragment.Tab1Fragment"
+                android:id="@+id/addrecord_tab"
+                android:name="org.qhy.tallybook.fragment.AddRecoredFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-
             <fragment
-                android:id="@+id/tab2"
-                android:name="org.qhy.tallybook.fragment.Tab2Fragment"
+                android:id="@+id/statistics_tab"
+                android:name="org.qhy.tallybook.fragment.StatisticsFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+            <fragment
+                android:id="@+id/type_tab"
+                android:name="org.qhy.tallybook.fragment.TypeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <fragment 
+                android:id="@+id/help_tab"
+                android:name="org.qhy.tallybook.fragment.HelpFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
         </FrameLayout>
     </LinearLayout>
 

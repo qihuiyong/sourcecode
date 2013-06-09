@@ -14,11 +14,16 @@ public class MainActivity extends FragmentActivity {
 
 		TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost);
 		tabHost.setup();
-
-		tabHost.addTab(tabHost.newTabSpec("33tab1").setIndicator("tab1111")
-				.setContent(R.id.tab1));
-		tabHost.addTab(tabHost.newTabSpec("33tab2").setIndicator("tab2111")
-				.setContent(R.id.tab2));
+		
+		tabHost.addTab(tabHost.newTabSpec("addrecordTab_tag").setIndicator(this.getResources().getText(R.string.addrecord_tab_lable))
+				.setContent(R.id.addrecord_tab));
+		
+		tabHost.addTab(tabHost.newTabSpec("statisticsTab_tab").setIndicator(this.getResources().getText(R.string.statistics_tab_lable))
+				.setContent(R.id.statistics_tab));
+		
+		tabHost.addTab(tabHost.newTabSpec("typeTab_tab").setIndicator(this.getResources().getText(R.string.type_tab_lable))
+				.setContent(R.id.type_tab));
+		tabHost.addTab(tabHost.newTabSpec("helpTab_tab").setIndicator(this.getResources().getText(R.string.help_tab_lable)).setContent(R.id.help_tab));
 	}
 
 	@Override

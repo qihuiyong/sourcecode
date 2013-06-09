@@ -4,5 +4,13 @@
     <string name="app_name">记账本</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
+    
+    <!-- mainActivity -->
+    <string name="addrecord_tab_lable">新记录</string>
+    <string name="statistics_tab_lable">统计</string>
+    <string name="type_tab_lable">分类列表</string>
+    <string name="help_tab_lable">帮助</string>
+	<!-- 添加记录fragment -->
+	<string name="addrecord_title">添加记录</string>
+	
 </resources>
