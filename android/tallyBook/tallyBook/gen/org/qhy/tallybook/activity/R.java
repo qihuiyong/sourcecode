@@ -24,12 +24,15 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080008;
+        public static final int action_settings=0x7f08000b;
         public static final int addType=0x7f080005;
         public static final int addrecord_tab=0x7f080000;
+        public static final int btn_addType=0x7f08000a;
         public static final int createDb=0x7f080004;
         public static final int deleteDb=0x7f080007;
+        public static final int edit_typeName=0x7f080009;
         public static final int help_tab=0x7f080003;
+        public static final int lab_typeName=0x7f080008;
         public static final int showData=0x7f080006;
         public static final int statistics_tab=0x7f080001;
         public static final int type_tab=0x7f080002;
@@ -54,8 +57,12 @@ public final class R {
          */
         public static final int addrecord_title=0x7f050007;
         public static final int app_name=0x7f050000;
+        public static final int btn_addtype=0x7f050009;
         public static final int hello_world=0x7f050002;
         public static final int help_tab_lable=0x7f050006;
+        /**  类型fragment 
+         */
+        public static final int lab_typename=0x7f050008;
         public static final int statistics_tab_lable=0x7f050004;
         public static final int type_tab_lable=0x7f050005;
     }

@@ -12,5 +12,7 @@
     <string name="help_tab_lable">帮助</string>
 	<!-- 添加记录fragment -->
 	<string name="addrecord_title">添加记录</string>
-	
+	<!-- 类型fragment -->
+	<string name="lab_typename">类型名称</string>
+	<string name="btn_addtype">添加</string>
 </resources>
