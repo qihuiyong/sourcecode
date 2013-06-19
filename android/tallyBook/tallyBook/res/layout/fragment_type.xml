@@ -3,45 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <RelativeLayout 
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:paddingTop="3dp"
-        android:gravity="top"
-        >
-       <TextView 
-           android:id="@+id/lab_typeName"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="@string/lab_typename"
-        />
-       <EditText 
-           android:layout_toRightOf="@id/lab_typeName"
-           android:id="@+id/edit_typeName"
-           android:layout_width="150dp"
-           android:layout_height="wrap_content"
-           android:inputType="text"
-           />
-       <Button 
-           android:layout_toRightOf="@id/edit_typeName"
-           android:id="@+id/btn_addType"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="@string/btn_addtype"
-           />
-    </RelativeLayout>
-    <RelativeLayout 
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7"
-        >
-            <TextView 
-         android:layout_width="match_parent"
-         android:layout_height="60dp"
-         android:text="删除页面"
-        />
-    </RelativeLayout>
 
+    <Button
+        android:id="@+id/btn_addtype"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="@string/btn_addtype" />
 
+    <ListView
+        android:id="@+id/lv_type"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" >
+    </ListView>
 </LinearLayout>

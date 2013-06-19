@@ -14,8 +14,6 @@ public class AddRecoredFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		// // TODO Auto-generated method stub
-		// super.onCreateView(inflater, container, savedInstanceState);
 		return inflater.inflate(layout.fragment_addrecord, container, false);
 	}
 
