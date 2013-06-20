@@ -17,4 +17,6 @@
 	<string name="btn_addtype">添加</string>
 	<string name="btn_save">保存</string>
 	<string name="btn_cancel">取消</string>
+	<string name="msg_addSuccess">类型添加成功!</string>
+	<string name="msg_addFailed">类型添加失败!</string>
 </resources>

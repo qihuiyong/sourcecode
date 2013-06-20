@@ -29,7 +29,27 @@ public class TallyBookDatabase {
 			+ TypeColumns.TID + ") ," + RecoredColumns.CNAME + " VARCHAR(50) ,"
 			+ RecoredColumns.CSUM + "  DOUBLE ," + RecoredColumns.CDATE
 			+ " TIMESTAMP" + ")";
-
+	
+	//
+	private static Object look= new Object();
+	private  static  TallyBookDatabase single;
+	private  DatabaseHelper h;
+	private Context context; 
+	private  TallyBookDatabase(Context context1) {
+		this.context = context1;
+		h = new DatabaseHelper(context,DATABASE_NAME,null , DATABASE_VERSION);
+	}
+	public static TallyBookDatabase newInstance(Context context){
+		if(single !=null){return single;}
+		synchronized (look) {
+			if(single == null){
+				single = new TallyBookDatabase(context);
+			}
+		}
+		return single;
+	}
+	
+	
 	/**/
 	/**
 	 * 获取数据库
@@ -37,7 +57,6 @@ public class TallyBookDatabase {
 	 * @return
 	 */
 	public SQLiteDatabase getDatabase(Context context) {
-		DatabaseHelper h = new DatabaseHelper(context,DATABASE_NAME,null , DATABASE_VERSION);
 		return h.getWritableDatabase();
 	}
 	
@@ -48,7 +67,7 @@ public class TallyBookDatabase {
 	 * @param values
 	 * @return
 	 */
-	public long insertType(Context context,ContentValues values){
+	public long insertType(ContentValues values){
 		return this.getDatabase(context).insert(TallyBookDatabase.TYPE_TALLYBOOK_TABLE, null, values);
 	}
 	/**
@@ -57,7 +76,7 @@ public class TallyBookDatabase {
 	 * @param values
 	 * @return
 	 */
-	public long updateType(Context context,ContentValues values){
+	public long updateType(ContentValues values){
 		return this.getDatabase(context).update(TallyBookDatabase.TYPE_TALLYBOOK_TABLE, values, TypeColumns.TID+" =  ?", new String[]{values.get(TypeColumns.TID).toString()});
 	}
 	
