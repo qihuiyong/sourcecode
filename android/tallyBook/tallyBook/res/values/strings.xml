@@ -15,4 +15,6 @@
 	<!-- 类型fragment -->
 	<string name="lab_typename">类型名称</string>
 	<string name="btn_addtype">添加</string>
+	<string name="btn_save">保存</string>
+	<string name="btn_cancel">取消</string>
 </resources>
