@@ -64,14 +64,16 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int btn_addtype=0x7f050009;
         public static final int btn_cancel=0x7f05000b;
+        public static final int btn_close=0x7f05000c;
         public static final int btn_save=0x7f05000a;
         public static final int hello_world=0x7f050002;
         public static final int help_tab_lable=0x7f050006;
         /**  类型fragment 
          */
         public static final int lab_typename=0x7f050008;
-        public static final int msg_addFailed=0x7f05000d;
-        public static final int msg_addSuccess=0x7f05000c;
+        public static final int msg_addFailed=0x7f05000e;
+        public static final int msg_addSuccess=0x7f05000d;
+        public static final int msg_tynameisnull=0x7f05000f;
         public static final int statistics_tab_lable=0x7f050004;
         public static final int type_tab_lable=0x7f050005;
     }

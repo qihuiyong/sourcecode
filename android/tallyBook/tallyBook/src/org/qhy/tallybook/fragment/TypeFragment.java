@@ -61,7 +61,11 @@ public class TypeFragment extends Fragment {
 				btn_savetype.setOnClickListener(new View.OnClickListener() {
 					@Override
 					public void onClick(View v) {
-						String typename = text_typename.getText().toString();
+						String typename = text_typename.getText().toString().trim();
+						if(typename ==null || "".equals(typename) ){
+							Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.msg_tynameisnull), Toast.LENGTH_LONG).show();
+							return;
+						}
 						ContentValues values = new ContentValues();
 						values.put(TypeColumns.TNAME, typename);
 						values.put(TypeColumns.TORDER, 1);
