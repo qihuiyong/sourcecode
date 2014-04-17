@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.qhy.demo.mavenProjects</groupId>
+		<artifactId>ParentProject</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>web-project</artifactId>
+	<packaging>war</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.qhy.demo.mavenProjects</groupId>
+			<artifactId>common-project</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- <dependency> <groupId>com.asiainfo.biframe.aibi-psma</groupId> <artifactId>aibi-psma-commons</artifactId> 
+			<version>${aibi-psma-version}</version> <exclusions> <exclusion> <artifactId>hadoop-core</artifactId> 
+			<groupId>org.apache.hadoop</groupId> </exclusion> </exclusions> </dependency> -->
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<env>dev</env>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<env>test</env>
+			</properties>
+		</profile>
+		<!-- <profile> <id>bj</id> <build> <resources> <resource> <directory>src/main/resources</directory> 
+			<excludes> <exclude>*/*_dev.properties</exclude> </excludes> <filtering>true</filtering> 
+			<targetPath></targetPath> </resource> </resources> </build> </profile> <profile> 
+			<id>dev</id> <build> <resources> <resource> <directory>src/main/resources</directory> 
+			<excludes> <exclude>*/*_bj.properties</exclude> </excludes> <filtering>true</filtering> 
+			<targetPath></targetPath> </resource> </resources> </build> <activation> 
+			<activeByDefault>true</activeByDefault> </activation> </profile> -->
+	</profiles>
+	<build>
+		<filters>
+			<filter>src/main/filters/jdbc-${env}.properties</filter>
+			<filter>src/main/filters/solr-${env}.properties</filter>
+			<filter>src/main/filters/conf/db-${env}.properties</filter>
+		</filters>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+			<!-- mvn tomcat:redeploy -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>tomcat-maven-plugin</artifactId>
+				<configuration>
+					<url>http://localhost:8080/manager</url>
+					<username>qhy</username>
+					<password>111111</password>
+					<path>/aweb</path>
+					<warFile>${project.build.directory}/${project.build.finalName}.war</warFile>
+					<!-- <warFile>target/aibi-psma-webapp-new-sqms-0.0.1-SNAPSHOT-all.war</warFile> -->
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>wode</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>src/main/assembly/assemble.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+	<!-- <build> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-surefire-plugin</artifactId> <configuration> <includes> 
+		<include>**/*Test.java</include> <include>**/*Suite.java</include> </includes> 
+		<argLine>-Dfile.encoding=UTF-8</argLine> <testFailureIgnore>true</testFailureIgnore> 
+		<skip>true</skip> </configuration> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-war-plugin</artifactId> <configuration> <packagingExcludes> 
+		** </packagingExcludes> <failOnMissingWebXml>false</failOnMissingWebXml> 
+		<archive> <forced>true</forced> <manifest> </manifest> <manifestEntries> 
+		<DisableIBMJAXWSEngine>TRUE</DisableIBMJAXWSEngine> </manifestEntries> </archive> 
+		</configuration> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-assembly-plugin</artifactId> <configuration> <appendAssemblyId>true</appendAssemblyId> 
+		<descriptors> <descriptor>src/main/assembly/assembly.xml</descriptor> </descriptors> 
+		<configuration> <excludes> <exclude>**/.svn/**</exclude> </excludes> </configuration> 
+		</configuration> <executions> <execution> <id>make-assembly</id> <phase>package</phase> 
+		<goals> <goal>single</goal> </goals> </execution> </executions> </plugin> 
+		</plugins> </build> -->
+</project>
