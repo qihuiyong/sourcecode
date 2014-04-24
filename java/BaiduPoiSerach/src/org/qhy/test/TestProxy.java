@@ -14,7 +14,7 @@ import org.apache.commons.httpclient.auth.AuthScope;
 import org.apache.commons.httpclient.methods.GetMethod;
 
 public class TestProxy {
-
+//百度开放平台POI网址 http://developer.baidu.com/map/webservice-placeapi.htm
 	public static void main(String[] args) throws HttpException, IOException {
 		HttpClient client = new HttpClient();
 		
@@ -25,13 +25,10 @@ public class TestProxy {
 		 client.getState().setProxyCredentials(AuthScope.ANY, creds);
 		// 使用 GET 方法 ，如果服务器需要通过 HTTPS 连接，那只需要将下面 URL 中的 http 换成 https
 		HttpMethod method = new GetMethod("http://api.map.baidu.com/place/v2/search?&q="
-				+ URLEncoder.encode("饭店", "UTF-8") + "&region="
-				+ URLEncoder.encode("北京", "UTF-8")
+				+ URLEncoder.encode("大厦", "UTF-8") + "&region="
+				+ URLEncoder.encode("宝鸡市", "UTF-8")
 				+ "&output=json&ak=1649c026d0cea10ccf5741348526cb44");
-		// 使用POST方法
-		// HttpMethod method = new PostMethod("http://java.sun.com");
 		client.executeMethod(method);
-
 		// 打印服务器返回的状态
 		System.out.println("状态："+method.getStatusLine());
 		// 打印返回的信息
