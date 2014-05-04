@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="org.qhy.test.gencode">
+	<class
+		name="DamApplicationTypeRela"
+		table="DAM_APPLICATION_TYPE_RELA"
+	>
+		<meta attribute="sync-DAO">true</meta>
+
+		<property
+			name="TypeId"
+			column="TYPE_ID"
+			type="string"
+			not-null="true"
+			length="32"
+		/>
+		<property
+			name="ParentId"
+			column="PARENT_ID"
+			type="string"
+			not-null="true"
+			length="32"
+		/>
+		<property
+			name="ChildId"
+			column="CHILD_ID"
+			type="string"
+			not-null="true"
+			length="32"
+		/>
+		<property
+			name="TypeName"
+			column="TYPE_NAME"
+			type="string"
+			not-null="false"
+			length="50"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

@@ -1,13 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.qhy.demo.mavenProjects</groupId>
-    <artifactId>ParentProject</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>common-project</artifactId>
-  <name>公共工程</name>
-  <description>所有公用的功能</description>
-  <dependencies>
-  </dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.qhy.demo.mavenProjects</groupId>
+		<artifactId>ParentProject</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<properties>
+		<hh>haor</hh>
+	</properties>
+	<artifactId>common-project</artifactId>
+	<name>公共工程</name>
+	<description>所有公用的功能</description>
+	<dependencies>
+	</dependencies>
 </project>

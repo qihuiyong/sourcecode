@@ -47,5 +47,32 @@
 			<artifactId>junit</artifactId>
 		</dependency>
 	</dependencies>
+	<profiles>
+	<!-- 通过-Dhh=haor激活  -->
+		<profile>
+			<id>qhy</id>
+			<properties>
+				<username>qihuiyong</username>
+			</properties>
+			<activation>
+				<property>
+					<name>hh</name>
+					<value>haor</value>
+				</property>
+			</activation>
+		</profile>
+		<profile>
+			<id>zyl</id>
+			<properties>
+				<username>zhangyoulei</username>
+			</properties>
+			<activation>
+				<property>
+					<name>hh</name>
+					<value>huair</value>
+				</property>
+			</activation>
+		</profile>
+	</profiles>
 
 </project>

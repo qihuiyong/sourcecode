@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="org.qhy.test.gencode">
+	<class
+		name="DamApplicationApprove"
+		table="DAM_APPLICATION_APPROVE"
+	>
+		<meta attribute="sync-DAO">true</meta>
+		<property
+			name="ApplicationId"
+			column="APPLICATION_ID"
+			type="string"
+			not-null="true"
+			length="32"
+		/>
+		<property
+			name="ApprovalType"
+			column="APPROVAL_TYPE"
+			type="java.lang.Short"
+			not-null="false"
+			length="5"
+		/>
+		<property
+			name="ApplicantUser"
+			column="APPLICANT_USER"
+			type="string"
+			not-null="false"
+			length="32"
+		/>
+		<property
+			name="ApplicantDay"
+			column="APPLICANT_DAY"
+			type="timestamp"
+			not-null="false"
+			length="26"
+		/>
+		<property
+			name="ApprovalTxt"
+			column="APPROVAL_TXT"
+			type="string"
+			not-null="false"
+			length="500"
+		/>
+		<property
+			name="ApprovalResult"
+			column="APPROVAL_RESULT"
+			type="java.lang.Short"
+			not-null="false"
+			length="5"
+		/>
+		<property
+			name="ApprovalUser"
+			column="APPROVAL_USER"
+			type="string"
+			not-null="false"
+			length="32"
+		/>
+		<property
+			name="ApprovalDay"
+			column="APPROVAL_DAY"
+			type="timestamp"
+			not-null="false"
+			length="26"
+		/>
+		<property
+			name="Desc"
+			column="DESC"
+			type="string"
+			not-null="false"
+			length="500"
+		/>
+
+
+	</class>	
+</hibernate-mapping>
