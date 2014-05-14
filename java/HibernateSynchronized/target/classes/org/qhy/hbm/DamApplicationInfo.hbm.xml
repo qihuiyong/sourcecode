@@ -3,17 +3,18 @@
 	"-//Hibernate/Hibernate Mapping DTD//EN"
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 
-<hibernate-mapping package="org.qhy.test.gencode">
+<hibernate-mapping package="org.qhy.test.gencodeDAM">
 	<class
 		name="DamApplicationInfo"
 		table="DAM_APPLICATION_INFO"
 	>
 		<meta attribute="sync-DAO">true</meta>
 
-		<id
+		<property
 			name="ApplicationId"
 			column="APPLICATION_ID"
 			type="string"
+			not-null="false"
 			length="32"
 		/>
 		<property
@@ -40,9 +41,9 @@
 		<property
 			name="LogicLayer"
 			column="LOGIC_LAYER"
-			type="java.lang.Short"
+			type="integer"
 			not-null="false"
-			length="5"
+			length="22"
 		/>
 		<property
 			name="ServerId"
@@ -61,9 +62,9 @@
 		<property
 			name="ApplicationType"
 			column="APPLICATION_TYPE"
-			type="java.lang.Short"
+			type="integer"
 			not-null="false"
-			length="5"
+			length="22"
 		/>
 		<property
 			name="ResultType"
@@ -75,9 +76,9 @@
 		<property
 			name="ModelType"
 			column="MODEL_TYPE"
-			type="java.lang.Short"
+			type="integer"
 			not-null="false"
-			length="5"
+			length="22"
 		/>
 		<property
 			name="ApplicationScore"
@@ -89,9 +90,9 @@
 		<property
 			name="EvaluateLevel"
 			column="EVALUATE_LEVEL"
-			type="java.lang.Short"
+			type="integer"
 			not-null="false"
-			length="5"
+			length="22"
 		/>
 		<property
 			name="CreateTime"
@@ -103,9 +104,9 @@
 		<property
 			name="RecoveryModel"
 			column="RECOVERY_MODEL"
-			type="java.lang.Short"
+			type="integer"
 			not-null="false"
-			length="5"
+			length="22"
 		/>
 		<property
 			name="Status"

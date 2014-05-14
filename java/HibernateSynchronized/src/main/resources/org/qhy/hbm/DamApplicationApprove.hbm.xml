@@ -3,25 +3,26 @@
 	"-//Hibernate/Hibernate Mapping DTD//EN"
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 
-<hibernate-mapping package="org.qhy.test.gencode">
+<hibernate-mapping package="org.qhy.test.gencodeDAM">
 	<class
 		name="DamApplicationApprove"
 		table="DAM_APPLICATION_APPROVE"
 	>
 		<meta attribute="sync-DAO">true</meta>
-		<property
-			name="ApplicationId"
-			column="APPLICATION_ID"
+		<id
+			name="Id"
 			type="string"
-			not-null="true"
-			length="32"
-		/>
+			column="APPLICATION_ID"
+		>
+			<generator class="sequence"/>
+		</id>
+
 		<property
 			name="ApprovalType"
 			column="APPROVAL_TYPE"
-			type="java.lang.Short"
+			type="integer"
 			not-null="false"
-			length="5"
+			length="22"
 		/>
 		<property
 			name="ApplicantUser"
@@ -33,9 +34,9 @@
 		<property
 			name="ApplicantDay"
 			column="APPLICANT_DAY"
-			type="timestamp"
+			type="java.lang.String"
 			not-null="false"
-			length="26"
+			length="11"
 		/>
 		<property
 			name="ApprovalTxt"
@@ -47,9 +48,9 @@
 		<property
 			name="ApprovalResult"
 			column="APPROVAL_RESULT"
-			type="java.lang.Short"
+			type="integer"
 			not-null="false"
-			length="5"
+			length="22"
 		/>
 		<property
 			name="ApprovalUser"
@@ -61,9 +62,9 @@
 		<property
 			name="ApprovalDay"
 			column="APPROVAL_DAY"
-			type="timestamp"
+			type="java.lang.String"
 			not-null="false"
-			length="26"
+			length="11"
 		/>
 		<property
 			name="Desc"
