@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * 
+ * @description HeaderResp标签
  * @author qihy
  *
  */

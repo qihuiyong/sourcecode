@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * 与SS系统调度接口使用的实体类Node节点
+ * @description node标签
  * @author qihy
  *
  */

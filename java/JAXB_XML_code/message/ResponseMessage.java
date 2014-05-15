@@ -6,6 +6,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * @description Message标签
+ * @author qihy
+ *
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = { "headerResp", "bodyResp" })
 @XmlRootElement(name = "Message")

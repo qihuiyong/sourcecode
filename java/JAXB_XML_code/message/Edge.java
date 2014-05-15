@@ -6,10 +6,9 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * 与SS系统调度接口使用的实体类Edge节点
- * 
+ * @description edge标签
  * @author qihy
- * 
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "edge")

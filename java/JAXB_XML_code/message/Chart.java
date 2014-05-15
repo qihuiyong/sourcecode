@@ -13,10 +13,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * 与SS系统调度接口使用的实体类Chart节点
- * 
+ * @description chart标签
  * @author qihy
- * 
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = { "nodes", "edges" })
