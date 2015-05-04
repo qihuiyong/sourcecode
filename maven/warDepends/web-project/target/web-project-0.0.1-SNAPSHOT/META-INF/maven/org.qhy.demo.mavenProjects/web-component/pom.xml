@@ -51,36 +51,6 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.qhy.mavenplugin</groupId>
-										<artifactId>copyfile</artifactId>
-										<versionRange>[1.0-SNAPSHOT,)</versionRange>
-										<goals>
-											<goal>copyFile</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<execute>
-											<runOnIncremental>false</runOnIncremental>
-										</execute>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -99,27 +69,16 @@
 			</plugin>
 			<plugin>
 				<groupId>org.qhy.mavenplugin</groupId>
-				<artifactId>copyfile</artifactId>
+				<artifactId>cope-files</artifactId>
 				<version>1.0-SNAPSHOT</version>
 				<configuration>
-					<message>23233333333333333333333</message>
-					<copyfiles>
-						<file>
-							<sourceDir>src/main/webapp/web-common</sourceDir>
-							<targetDir>E:/qihuiyong/gitrepo/sourcecode/maven/warDepends/web-project/src/main/webapp/web-common</targetDir>
-						</file>
-						<file>
-							<sourceDir>src/main/webapp/web-common</sourceDir>
-							<targetDir>E:/common2/</targetDir>
-						</file>
-					</copyfiles>
+					<cptask>2323232323</cptask>
 				</configuration>
 				<executions>
 					<execution>
-						<id>cpfile</id>
-						<phase>validate</phase>
+						<phase>test</phase>
 						<goals>
-							<goal>copyFile</goal>
+							<goal>copy-file</goal>
 						</goals>
 					</execution>
 				</executions>

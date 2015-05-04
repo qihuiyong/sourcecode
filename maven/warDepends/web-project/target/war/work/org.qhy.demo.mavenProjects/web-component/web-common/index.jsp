@@ -9,7 +9,5 @@
 <body>
 Welcome TO AutoDeploy!<br />
 HH:<%= request.getAttribute("username")%>
-111111111111111111sdsddsd
-sdsdsdsdwewesdsdsd
 </body>
 </html>

@@ -18,7 +18,7 @@ public class CommonServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		req.setAttribute("username", "QIHUIYONG! "+StringUtil.getHelloworld());
+		req.setAttribute("username", "QIHUIYONG!222222 "+StringUtil.getHelloworld());
 		req.getRequestDispatcher("index.jsp").forward(req, resp);
 	}
 

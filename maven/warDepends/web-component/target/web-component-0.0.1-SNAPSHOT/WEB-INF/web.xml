@@ -4,15 +4,6 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 	<display-name>测试</display-name>
 	<servlet>
-		<servlet-name>my_servlet</servlet-name>
-		<servlet-class>org.qhy.servlet.MyServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>my_servlet</servlet-name>
-		<url-pattern>/mysvl</url-pattern>
-	</servlet-mapping>
-	<servlet>
 		<servlet-name>common_servlet</servlet-name>
 		<servlet-class>org.qhy.servlet.CommonServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>

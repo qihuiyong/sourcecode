@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-Welcome TO AutoDeploy!<br />
+Welcome TO AutoDeploy1111111!<br />
 HH:<%= request.getAttribute("username")%>
-111111111111111111sdsddsd
-sdsdsdsdwewesdsdsd
 </body>
 </html>
