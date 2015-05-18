@@ -12,7 +12,8 @@ import org.qhy.pojo.File;
  * 
  * @author qihy
  * @goal copyFile
- * @phase validate
+ * @defaultPhase validate
+ * 
  */
 public class CopyFileMojo extends AbstractMojo {
 
