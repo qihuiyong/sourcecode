@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+        http://www.springframework.org/schema/beans/spring-beans.xsd  
+        http://code.alibabatech.com/schema/dubbo  
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd  
+        ">
+	<dubbo:application name="consumer-of-helloworld-app" />
+	<dubbo:registry protocol="zookeeper" address="192.168.199.139:2181" /><!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
+	<dubbo:reference id="demoService"
+		interface="org.qhy.demo.dubboserver.ITestService" />
+
+</beans>  
+ 
