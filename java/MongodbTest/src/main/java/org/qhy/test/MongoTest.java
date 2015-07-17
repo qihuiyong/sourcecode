@@ -41,7 +41,7 @@ public class MongoTest {
         this.close();
     }
     private void openConnect(){
-        mongoClient = new MongoClient("192.168.199.134",27017);
+        mongoClient = new MongoClient("192.168.199.139",27017);
     }
     private void close(){
         mongoClient.close();
