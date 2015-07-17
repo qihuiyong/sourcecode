@@ -1,5 +1,7 @@
 package org.mongodb.util.test;
 
+import java.util.regex.Pattern;
+
 import org.bson.BsonDocument;
 import org.bson.BsonString;
 import org.bson.Document;
@@ -86,7 +88,7 @@ public class TestCRUD extends MongodbCommon {
 	/**
 	 * 字段=匹配
 	 */
-//	@Test
+	@Test
 	public void testFieldQuery() {
 		MongoClient client = this.getDefauClient();
 		BsonDocument filterDoc = new BsonDocument();
@@ -98,12 +100,42 @@ public class TestCRUD extends MongodbCommon {
 		while (mongoCursor.hasNext()) {
 			Document doc = mongoCursor.next();
 			System.out.println(doc);
-//			System.out.println(doc.getObjectId("_id"));
 			count++;
 		}
+		System.out.println("count查到："+count+"个文档");
+		client.close();
+	}
+	
+	/**
+	 * count查询
+	 */
+	@Test
+	public void testQueryCount() {
+		MongoClient client = this.getDefauClient();
+		BsonDocument filterDoc = new BsonDocument();
+		filterDoc.append("name", new BsonString("MYSQL3"));
+		MongoCollection<Document> coll = this.getCollection(client);
+		long count = coll.count(filterDoc);
 		System.out.println("一共查到："+count+"个文档");
 		client.close();
 	}
+	
+	/**
+	 * 模糊查询
+	 */
+	@Test
+	public void testQueryLike() {
+		MongoClient client = this.getDefauClient();
+//		BsonDocument filterDoc = new BsonDocument();
+		Pattern pattern =Pattern.compile("^MYSQL3$");
+		BasicDBObject query = new BasicDBObject("name", pattern);
+		
+		MongoCollection<Document> coll = this.getCollection(client);
+		long count = coll.count(query);
+		System.out.println("like查询一共查到："+count+"个文档");
+		client.close();
+	}
+	
 
 	@Before
 	public void beforeM() {
@@ -113,7 +145,7 @@ public class TestCRUD extends MongodbCommon {
 	@After
 	public void afterM() {
 		long end_ss = System.currentTimeMillis();
-		System.out.println("耗时>>>>:" + (end_ss - start_ss));
+		System.out.println("耗时>>>>: " + (end_ss - start_ss)+" MS");
 	}
 
 }
