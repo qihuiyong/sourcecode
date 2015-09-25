@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* 
+Aisainfolinkage All copyright reserved
+Date: 2010.10.20
+Version: v1.0
+Creator: Wulei
+E-mail: wulei@asiainfo-linkage.com
+ */
+/* aibi_flow start */
+.aibi_flow {
+	height:30px;
+}
+.aibi_flow ul {
+	float:left;
+}
+.aibi_flow li {
+	padding:0 15px;
+	height:30px;
+	line-height:30px;
+	float:left;
+	display:inline;
+	text-align:center;
+}
+.aibi_flow li span,.aibi_flow li a {
+	height:100%;
+	float:left;
+}
+.aibi_flow li.on span, .aibi_flow li.on a{
+	font-weight:bold;
+}
+.aibi_flow li.arrow, .aibi_flow li.arrow_front, .aibi_flow li.arrow_behind{
+	width:16px;
+	height:30px;
+	padding:0;
+}
+.aibi_flow li.first {
+	padding:0 15px 0 20px;
+	border-left:1px solid;
+}
+.aibi_flow li.last {
+	padding:0 20px 0 15px;
+	border-right:1px solid;
+}
+/* aibi_flow end */

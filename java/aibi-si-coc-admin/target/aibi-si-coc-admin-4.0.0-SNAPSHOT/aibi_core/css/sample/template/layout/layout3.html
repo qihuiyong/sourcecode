@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="../../../default/css/base.css" rel="stylesheet" type="text/css" />
+<link href="../../../default/css/panel.css" rel="stylesheet" type="text/css" />
+<link href="../../../default/css/table.css" rel="stylesheet" type="text/css" />
+<link href="../../../default/css/tab.css" rel="stylesheet" type="text/css" />
+
+<title>布局1</title>
+<script language=javascript>
+    function secBoard(n)
+    {
+       for(i=0;i<menu.childNodes.length;i++)
+       menu.childNodes[i].className="sec1";
+       menu.childNodes[n].className="sec2";
+ 
+       for(i=0;i<main.childNodes.length;i++)
+       main.childNodes[i].style.display="none";
+       main.childNodes[n].style.display="block";
+ 
+    }
+</script>
+<!--  tab选项卡 js-->
+  <script> 
+      <!-- 
+       /*第一种形式 第二种形式 更换显示样式*/ 
+       function setTab(name,cursel,n){ 
+          for(i=1;i<=n;i++){ 
+             var menu=document.getElementById(name+i); 
+             var con=document.getElementById("con_"+name+"_"+i); 
+             menu.className=i==cursel?"hover":""; 
+            con.style.display=i==cursel?"block":"none"; 
+          } 
+       } 
+//--> 
+</script> 
+
+
+</head>
+
+<body style="margin:0 auto; text-align:center">
+   <div class="panel" style="width:60%;">
+       <div class="head" style="width:100%;">
+	      <img src="../../../default/images/26_eastadmin.png" /><span>默认面板</span>
+	      <div class="hideImg"><img src="../../../default/images/fold.gif" width="15" height="15" /></div>
+	   </div>
+     <div class="content" style="width:100%;">
+	  <div id="spaceTab" style="width:98%"> 
+       <div class="Menubox"> 
+         <ul> 
+            <li id="two1" onmousedown="setTab('two',1,4)" class="hover">新闻1</li> 
+            <li id="two2" onmousedown="setTab('two',2,4)" >新闻2</li> 
+            <li id="two3" onmousedown="setTab('two',3,4)">新闻3</li> 
+            <li id="two4" onmousedown="setTab('two',4,4)">新闻4</li> 
+         </ul> 
+       </div> 
+       <div class="Contentbox"> 
+           <div id="con_two_1" >新闻列表1</div> 
+           <div id="con_two_2" style="display:none">新闻列表2</div> 
+           <div id="con_two_3" style="display:none">新闻列表3</div> 
+           <div id="con_two_4" style="display:none">新闻列表4</div> 
+       </div> 
+    </div> 
+	 </div>
+   </div>
+</body>
+</html>

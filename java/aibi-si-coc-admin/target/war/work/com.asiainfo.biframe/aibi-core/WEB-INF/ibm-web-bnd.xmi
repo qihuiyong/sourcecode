@@ -1,0 +1,9 @@
+<webappbnd:WebAppBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:webappbnd="webappbnd.xmi" xmi:id="WebAppBinding_1237540898595" virtualHostName="default_host">
+  <webapp href="WEB-INF/web.xml#WebApp_ID"/>
+  <resRefBindings xmi:id="ResourceRefBinding_1211005459718" jndiName="jdbc/AiomniDB">
+    <bindingResourceRef href="WEB-INF/web.xml#ResourceRef_1211005459718"/>
+  </resRefBindings>
+  <resRefBindings xmi:id="ResourceRefBinding_1211005459719" jndiName="jdbc/Act">
+    <bindingResourceRef href="WEB-INF/web.xml#ResourceRef_1211005459719"/>
+  </resRefBindings>
+</webappbnd:WebAppBinding>

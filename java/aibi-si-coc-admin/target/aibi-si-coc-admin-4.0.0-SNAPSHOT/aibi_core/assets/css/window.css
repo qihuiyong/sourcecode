@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* CSS Document */
+.portlet {
+	font-size:12px;	 
+}
+.portlet span.portlet {
+	text-align:left;
+	display: block;
+}
+.portlet-header {
+	clear: both;
+	color: #FFF;
+	font-weight:bold;
+	height:25px;
+	line-height:25px;
+	background-repeat:no-repeat;
+	background-image: url(../images/portal_top_left12.gif);
+}
+.content-portlet-header {
+	clear: both;
+	background-repeat:no-repeat;
+}
+.portlet-header-cornerright {
+	float: right;
+	background-image: url(../images/portal_top_right13.gif);
+	background-repeat: no-repeat;
+	height:25px;
+	width:5px;
+	overflow:hidden;
+}
+.portlet-header-title {
+	float:left;
+	padding-left:10px;
+	color:#666;
+}
+.portlet-header a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.portlet-header a:hover {
+	text-decoration: underline;
+	color: #5C225D;
+}
+.portlet-content{
+	border:1px solid #ccc;
+	border-top:none;
+	text-align:left;
+	padding:5px;
+}
+.portlet2 {
+	font-size:12px;
+	position:relative;
+}
+.portlet-content2 {
+	border-right:1px solid #F1F1F1;
+	border-left:1px solid #F1F1F1;
+	border-bottom:1px solid #F1F1F1;
+	padding:0px 0px 5px 0px;
+	background:#FFFFFF;
+	margin-top: -10px;
+}
+.portal-configure {
+	margin-top: -10px;
+}
+.portlet-footer {
+	background-repeat: no-repeat;
+	height: 5px;
+	background-image: url(../images/portal_bot_left.jpg);
+	font-size:0px
+}
+.portlet-footer-cornerright {
+	float: right;
+	background-image: url(../images/portal_bot_right.jpg);
+	background-repeat: no-repeat;
+	height: 5px;
+	width: 3px;
+	font-size:0px
+}
+.portlet-header-button {
+	float:right;
+	margin-top:4px;
+}
+.window-normal {
+	visibility:hidden
+}
+/* ### PortalWindow button style ###*/
+div.portlet-header-button a {
+	background-repeat: no-repeat;
+	margin-top:6px;
+	height: 17px;
+	width: 17px;
+	display:inline-block;
+	cursor:pointer;
+}
+div.portlet-header-button a:hover {
+	background-position: -17px 0px;
+}
+div.portlet-header-button span {
+	background-repeat: no-repeat;
+	height: 16px;
+	width: 16px;
+	display:inline-block;
+	cursor:pointer;
+}
+.refreshbutton {
+	background-image: url(../images/icon_button_Refresh.gif);
+}
+.editbutton {
+	background-image: url(../images/icon_button_Editor.gif);
+}
+.helpbutton {
+	background-image: url(../images/icon_button_help.gif);
+}
+.minbutton {
+	background-image: url(../images/icon_button_small.gif);
+}
+.restorebutton {
+	background-image: url(../images/icon_button_Suit.gif);
+}
+.maxbutton {
+	background-image: url(../images/icon_button_Enlarge.gif);
+}
+.configbutton {
+	background-image: url(../images/icon_button_configure.gif);
+}
+.closebutton {
+	background-image: url(../images/icon_button_close.gif);
+}
+.backbutton {
+	background-image: url(../images/icon_button_back.gif);
+}
+.forwardbutton {
+	background-image: url(../images/icon_button_forward.gif);
+}
+.portlet-header-button-close {
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	background-image: url(../images/icon_button_close.gif);
+	background-position: 0px 17px;
+}
+div.portlet-header-button-close span {
+	background-repeat: no-repeat;
+	margin-top:1px;
+	height: 17px;
+	width: 17px;
+	display:inline-block;
+	cursor:pointer;
+}
+.portlet-header-button-close2 {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-image: url(../images/icon-close.gif);
+}
+div.portlet-header-button-close2 span {
+	background-repeat: no-repeat;
+	background-position: -17px 0px;
+	margin-top:1px;
+	height: 35px;
+	width: 35px;
+	display:inline-block;
+	cursor:pointer;
+}

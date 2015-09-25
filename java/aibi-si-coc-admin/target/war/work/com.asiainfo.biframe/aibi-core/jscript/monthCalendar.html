@@ -1,0 +1,74 @@
+﻿<html>
+<head>
+<title>月份选择</title>
+<STYLE TYPE="text/css">
+.class1 {
+	font-size:14px;
+	font-family:'verdana'; 
+	font-weight:bold;
+}
+.button {
+	font-size:12px;
+	font-family:'verdana'; 
+}
+</style>
+<script language="javascript">
+var currYear;
+function preYear() {
+	var currYearStr = document.all.yearContent.innerHTML;
+	currYearStr = currYearStr.substring(0,currYearStr.length - 1);
+	currYear = Math.floor(currYearStr) - 1;
+	document.all.yearContent.innerHTML = currYear + "年";
+}
+function nextYear() {
+	var currYearStr = document.all.yearContent.innerHTML;
+	currYearStr = currYearStr.substring(0,currYearStr.length - 1);
+	currYear = Math.floor(currYearStr) + 1;
+	document.all.yearContent.innerHTML = currYear + "年";
+}
+function selectMonth(month) {
+	var currYearStr = document.all.yearContent.innerHTML;
+	currYearStr = currYearStr.substring(0,currYearStr.length - 1);
+	var selectYearMonth = currYearStr + "-" + month;
+	//alert(selectYearMonth);
+	window.returnValue = selectYearMonth;
+	window.close();
+}
+var one="一月";
+</script>
+</head>
+<body>
+<table width="100%" BORDER=1 CELLSPACING=0  CELLPADDING=0 BGCOLOR='#e0e0e0'>
+	<tr class="class1">
+		<td align="center"><a href="#" onclick="preYear();"><b>[<]</b></a></td>
+		<td align="center" id="yearContent"></td>
+		<td align="center"><a href="#" onclick="nextYear();"><b>[>]</b></a></td>
+	</tr>
+</table>
+<br>
+<table width="100%" BORDER=1>
+	<tr class="class1">
+		<td align="center" width="25%"><a href="#" onclick="selectMonth('01');"><script>document.write(one)</script></a></td>
+		<td align="center" width="25%"><a href="#" onclick="selectMonth('02');">二月</a></td>
+		<td align="center" width="25%"><a href="#" onclick="selectMonth('03');">三月</a></td>
+		<td align="center" width="25%"><a href="#" onclick="selectMonth('04');">四月</a></td>
+	<tr>
+	<tr class="class1">
+		<td align="center"><a href="#" onclick="selectMonth('05');">五月</a></td>
+		<td align="center"><a href="#" onclick="selectMonth('06');">六月</a></td>
+		<td align="center"><a href="#" onclick="selectMonth('07');">七月</a></td>
+		<td align="center"><a href="#" onclick="selectMonth('08');">八月</a></td>
+	<tr>
+	<tr class="class1">
+		<td align="center"><a href="#" onclick="selectMonth('09');">九月</a></td>
+		<td align="center"><a href="#" onclick="selectMonth('10');">十月</a></td>
+		<td align="center"><a href="#" onclick="selectMonth('11');">十一月</a></td>
+		<td align="center"><a href="#" onclick="selectMonth('12');">十二月</a></td>
+	<tr>
+</table>
+</body>
+</html>
+<script language="javascript">
+var today = new Date();
+document.all.yearContent.innerHTML = today.getYear() + "年";
+</script>

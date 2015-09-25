@@ -1,5 +1,7 @@
 package org.mongodb.util;
 
+import java.util.List;
+
 import org.bson.Document;
 
 import com.mongodb.MongoClient;
@@ -28,6 +30,10 @@ public abstract class MongodbCommon {
 		MongoCollection<Document> cll = this.getCollection(client);
 		cll.insertOne(doc);
 		
+	}
+	public void insertMuiltDocument(List<Document> docList,MongoClient client) {
+		MongoCollection<Document> cll = this.getCollection(client);
+		cll.insertMany(docList);
 	}
 	public void updateDocument(Document doc,MongoClient client) {
 		MongoCollection<Document> cll = this.getCollection(client);

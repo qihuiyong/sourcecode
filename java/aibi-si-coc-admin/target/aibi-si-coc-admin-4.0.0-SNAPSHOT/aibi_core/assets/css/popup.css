@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* 
+Aisainfolinkage All copyright reserved
+Date: 2010.10.19
+Version: v1.0
+Creator: Wulei
+E-mail: wulei@asiainfo-linkage.com
+ */
+/* aibi_popup start */
+.aibi_popup .caption {
+	height:30px;
+	border-bottom:none;
+	font: bold 12px/23px "宋体";
+	color:#fff;
+	padding-left:10px;
+	text-align:left;
+}
+.aibi_popup .caption .close {
+	width:16px;
+	height:16px;
+	background:url(../images/aibi_icon.gif) no-repeat -50px -350px;
+	float:right;
+	margin:4px;
+	cursor:pointer;
+}
+.aibi_popup .content {
+	padding:10px;
+}
+.aibi_popup .bottom {
+	height:25px;
+	padding:2px 3px 0 3px;
+	text-align:right;
+}
+.aibi_popup .bottom .left {
+	float:left;
+	margin-top:2px;
+}
+.aibi_popup .bottom_center {
+	text-align:center;
+}
+.aibi_popup .bottom a {
+	margin-right:5px;
+}
+.aibi_popup_wrong .aibi_tips_warm {
+	overflow:auto;
+	height:125px;
+}
+.aibi_popup .aibi_icon_help, .aibi_popup .aibi_icon_mail {
+	width:auto;
+	padding-left:17px;
+}
+/* aibi_popup end */
+/* aibi_popup_data start */
+.aibi_popup_data {
+	left:50px;
+	top:50px;
+	position:absolute;
+	z-index:2000;
+	width:340px;
+}
+.aibi_popup_data .main {
+	width:320px;
+	padding:10px 10px 5px 10px;
+}
+.aibi_popup_data .adorn {
+	height:5px;
+	overflow:hidden;
+	width:350px;
+}
+.aibi_popup_data_secondary{
+	padding:5px;
+	border:1px solid;
+	position:absolute;
+}
+.aibi_popup_data_secondary .main {
+	padding:10px 10px 5px 10px;
+}
+.aibi_popup_data_secondary .main .list{
+	height:20px;
+	display:inline-block;
+	border:1px solid;
+	line-height:20px;
+	padding:0 13px;
+	text-decoration:none;
+	margin:5px 0;
+	vertical-align:text-bottom;
+}
+/* aibi_popup_data end */
+/* aibi_popup_table_tip start */
+.aibi_popup_table_tip{
+	position:absolute;
+	border:1px solid #bbb;
+	border-left:1px solid #eee;
+	border-top:1px solid #eee;
+	background-color:#f7f7f7;
+}
+.aibi_popup_table_tip h6{
+	line-height:30px;
+	border-bottom:1px solid #ccc;
+	margin-bottom:10px;
+}
+.aibi_popup_table_tip h6 a{
+	width:13px;
+	height:13px;
+	float:right;
+	margin-top:9px;
+	background:url(../images/aibi_icon.gif) -350px -100px no-repeat;
+}
+.aibi_popup_table_tip h6 a:hover{
+	margin-top:10px;
+}
+.aibi_popup_table_tip .main{
+	margin:0 10px 10px;
+}
+.aibi_popup_table_tip .main p{
+	line-height:20px;
+}
+/* aibi_popup_table_tip end */

@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+/* 
+Aisainfolinkage All copyright reserved
+Date: 2010.09.27
+Version: v1.0
+Creator: Wulei
+E-mail: wulei@asiainfo-linkage.com
+ */
+ /* default style */
+html {
+	height:100%;
+}
+body {
+}
+body, h1, h2, h3, h4, h5, h6,form {
+	font-size:12px;
+	padding:0;
+	margin:0;
+}
+ol, dl, ul, li, dl, dd, dt {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+p, fieldset, legend {
+	margin:0;
+	padding:0;
+}
+img {
+	border:none;
+	vertical-align:top;
+}
+button, a, a span, button span {
+	cursor: pointer;
+}
+select option {
+	padding-right:3px;
+}
+input, button, textarea, select {
+	font-family:Arial;
+	font-size:inherit;
+	font-weight:inherit;
+}
+/* @group 隐藏元素 */
+	/* @class invisible */
+	.invisible {
+	visibility:hidden;
+}
+/* @class hidden */
+	.hidden {
+	display: none;
+}
+/* @end */
+
+.right {
+	float: right!important;
+}
+marquee {
+	line-height:20px;
+}
+marquee p {
+	margin:10px 0;
+}

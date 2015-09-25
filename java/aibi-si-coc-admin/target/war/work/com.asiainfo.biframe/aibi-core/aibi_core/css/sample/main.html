@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="../default/css/base.css" type="text/css" rel="stylesheet" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+.bf {      font-family:"宋体";
+	  font-size:12px;
+	  line-height:21px;
+}
+-->
+</style>
+</head>
+
+<body style="margin:0">
+<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle" background="../default/images/loadbg_01.jpg"><strong>欢迎来到css样式模板系统</strong></td>
+  </tr>
+</table>
+<div style="height:5px;"></div>
+<table width="90%" height="370" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="13" height="13"><img src="../default/images/desk_06.jpg" width="13" height="13" alt="" /></td>
+    <td height="13" background="../default/images/desk_07.jpg"></td>
+    <td width="13"><img src="../default/images/desk_09.jpg" width="10" height="13" alt="" /></td>
+  </tr>
+  <tr>
+    <td background="../default/images/desk_11.jpg">&nbsp;</td>
+    <td><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="30" align="left" class="b3">一、为什么要建立css样式模板？</td>
+      </tr>
+      <tr>
+        <td align="left" class="duanluo">
+          <p>&nbsp;&nbsp;&nbsp;通过css样式模板的建立，在对于维护系统界面的样式更新上，就显得非常的容易，基本上可以在不需要程序人员的参与下就可以完成对网站的皮肤的更换。如果一个网站同时具备很多个主题包，那么只要简单的在XHTML中更换主题包的名称就可以使用不同的样式。这与网站的程序相配合将可以做出非常好的，具有很强扩展性的应用网站来！我们在做样式之前首先要想到样式的易维护性。一旦需要修改就必需要快速方便，修改工作的成本是很高的，所以我们要尽量避免这样的工作所占用时间的扩大。那我们就有必要把样式与结构代码分开。但是该css样式模板是针对于单一的风格体系的系统，风格是上一致的。对于门户网站，或是风格差异很大的系统体系是不适用的。<br />
+          </p></td>
+      </tr>
+      <tr>
+        <td height="30" align="left" class="b3">二、css样式模板的结构是怎样划分的？</td>
+      </tr>
+      <tr>
+        <td align="left" class="duanluo"><p>&nbsp;&nbsp;&nbsp;样式包中有一个base.css（基本共用样式）module.css（模块样式）forms.css （表单样式）table.css(表格汇总样式）menu（菜单汇总样式）mend.css（补丁样式）print.css（打印样式）     其中base.css是一个基本的样式，也就是所有页面的共性样式，这个样式与module.css配合基本上可以显示正常的页面。表单的划分，也可以有利于对不同地方的表单的样式管理。系统经常出现各种表格写在table.css里面，tab里存放着不同的导航列表样式、WEB标准涉及兼容性，所以需要有样式补丁当然还有针对性的这里就不一一列举。最后一个的打印样式，是提供给打印设置使用的。</p></td>
+      </tr>
+	  <tr>
+	    <td height="30" align="left" class="b3">三、css样式模板表的目录分配方法：</td>
+	    </tr>
+	  <tr>
+        <td height="30" align="left" class="b3"><p>1.[images] 是存放xHTML中出现的图片，<br />
+2.[jonStyle]我统称之为主题包，在样式包中包括了[CSS]、[img]、[js]分别存放CSS样式表、样式表中所引用的图片、系统中所用的JS。这里存放图片的[img]与外面的[images]虽然都是存放图片的，但是这里的图片的性质却是不一样的。[img]是CSS中所引用的图片，所有的图片的显示与否都与CSS样式有关，他的归属性是，[img]里的图片是归属于CSS的，而不是XHTML的。而CSS是不会引用[images]中的图片。[images]中的图片只归属于xHTML，xHTML也不要直接使用[img]中的图片。        这里把[js]也放在了[jonStyle]文件夹中也许会有人觉得不妥，我的考虑是这样的：行为与样式本都是使得这个XHTML的结构能多姿多彩。当我们需要更换皮肤的时候，也有可通这个行为也是需要更换的。比如：在第一套方案中，某个区块的内容是要上下滚动的，然而在第二套方案中，这个区块就需要左右滚动。那么这个行为也需要与样工一起更换。</p></td>
+      </tr>
+    </table></td>
+    <td background="../default/images/desk.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="13" height="10" valign="top"><img src="../default/images/desk_16.jpg" width="13" height="10" alt="" /></td>
+    <td height="10" background="../default/images/desk_17.jpg"></td>
+    <td height="10" valign="top"><img src="../default/images/desk_19.jpg" width="10" height="10" alt="" /></td>
+  </tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

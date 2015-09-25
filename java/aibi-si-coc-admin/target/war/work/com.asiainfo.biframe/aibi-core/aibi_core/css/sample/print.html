@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="../default/css/base.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+.bf {      
+      font-family:"宋体";
+	  font-size:12px;
+	  line-height:21px;
+	  text-align:left;
+}
+-->
+</style>
+</head>
+
+<body style="margin:0">
+<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle" background="../default/images/loadbg_01.jpg"><strong>打印列表样式</strong></td>
+  </tr>
+</table>
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top">
+	  <h3 class="bf">如何嵌入 print.css</h3>
+	  <p class="bf">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/print.css&quot;   type=&quot;text/css&quot; media=&quot;print&quot;&gt;</p>
+      <p class="bf">根据大纲 W3C 的要求，我们可以像上面那样引入一个用于打印的 css，重点在于<span class="STYLE2"> media=&quot;print&quot;</span>，这里不多说</p>
+      <h3 class="bf">重置页边距</h3>
+    <p class="bf">打印的页面通常需要一个上下左右的页边距，个人习惯上/下页边距大于或等于左右页边距，但 IE7 本身就可完全忽视 css   中定义的页边距，在打印预览中通过滑块调整。因此无特殊需求的话也可不定义</p>
+	<h3 class="bf">白纸黑字</h3>
+	<p class="bf">出于节省成本的考虑，打印文档的话最好以白纸黑字输出。那么我们最好把一些喜怒无常的元素定义上固定样式</p>
+	<p class="bf">body{color:#000000; background:#ffffff;}<br />
+	  a:link,   a:visited {color: #000000;}</p>
+	<h3 class="bf">统一单位</h3>
+	<p class="bf">印刷通常没用拿像素做单位的，所以最好把 css 中的单位转换成点 (point)，用 pt 表示，例如   p{font-size:12pt;}</p>
+	<h3 class="bf">隐藏不必要元素</h3>
+	<p class="bf">对于打印的人来说，它们需要的一般是正文内容，所以对于正文以外的互动内容可以隐藏掉。拿 WordPress 举例的话，通常来说包括：</p>
+	<ul>
+      <li class="bf">Logo </li>
+	  <li class="bf">子标题，如 This is my motherf*ckin weblog </li>
+	  <li class="bf">全站导航 </li>
+	  <li class="bf">分页导航，如 wp-pagenavi 插件 </li>
+	  <li class="bf">single.php 中的侧栏 </li>
+	  <li class="bf">搜索框 </li>
+	  <li class="bf">评论内容 </li>
+	  <li class="bf">回复评论的输入框 </li>
+	  <li class="bf">页脚 </li>
+	  </ul>
+	<p class="bf">如果 Logo   短小精悍并且就是想显示的，可以显示；子标题想强制显示的，可以显示；评论语句优美内容精辟的，可以显示；页脚有版权保护需要的，也可以显示。其它内容不建议显示，那么我们得到下面这段   css</p>
+	<p class="bf">#search, #respond, #sideinfo, #header,   #post-in-this-cat, .wp-pagenavi, .commentlink{display:none;}<br />
+	  </p>
+	<h3 class="bf">重定义链接</h3>
+	<p class="bf">既然前面已经把文档弄成了黑白，那么我们无法通过颜色区分链接，那么打印出来的链接有两种方法让他醒目出来，一是加粗，二是加下划线，二是在连接后显示   URL，前两种方法我们可以这样实现：</p>
+	<p class="bf">a:link, a:visited{font-weight:700;}<br />
+	  a:link,   a:visited{text-decoration:underline;}</p>
+	<p class="bf">字体粗细可以简单定义为 bold 来加粗，也可以设置精确值，如果效果不明显的话，请用精确值加粗，并且推荐使用 OpenType   字体。</p>
+	<p class="bf">但是有时加粗和有下划线的字体并不代表它就是连接，也可能是作者的注释和强调，或者有人本身就不喜欢下划线，比如我，那么可以用第三种方法，实际效果差不多是这样的：<strong>点击下载</strong> [http://sparanoid.com/cgx.flv]，代码如下</p>
+	<p class="bf">#content a[href^=&quot;http&quot;]:after,   a[href^=&quot;ftp:&quot;]:after{content:&quot; [&quot; attr(href) &quot;] &quot;;   font-weight:lighter;}<br />
+  #content a[href^=&quot;/&quot;]:after{content:&quot;   [http://sparanoid.com&quot; attr(href) &quot;] &quot;; font-weight:lighter;}</p>
+	<p class="bf">这种方法本身需要浏览器的支持，否则打印不出 URL。第一条会将所有 http 与 ftp 开头的 URL 显示出来，如果你的页面中包含   mailto，也可以这么定义，第二条会将所有本站缩略的链接先加上本站地址再打印出来，比如 &lt;a   href=&quot;/about/&quot;&gt;About&lt;/a&gt; 就会像 <strong>About</strong> [http://sparanoid.com/about/] 这样呈现。font-weight:lighter;   看个人喜好，定义其它样式也没问题</p>
+	<p class="bf">有时你只想显示正文中的 URL，那么像上面的例子套入指定层/类中就可以了</p>
+	<h3 class="bf">美化标题</h3>
+	<p class="bf">对于标题，可以稍加美化，让它看起来分段清晰，比如重定义其大小、字体、粗细，颜色就免了。个人比较喜欢在标题下面画一条淡色分割线，示例请回 <a href="#top">文章顶部</a> 看图，代码看下面</p>
+	<p class="bf">h1, h2, h4, h5{border-bottom:#dddddd 1px solid;   padding:15pt 0 10pt 0;}</p>
+	<p class="bf">根据自己网站的需要选择要显示分割线的标题，注意控制好上下 padding 即可。这里的分割线不建议使用恶心又难控制的 hr   来代替</p>
+	<h3 class="bf">其它细节</h3>
+	<p class="bf">常用样式可以定义，比如 code、blockquote 之类，特殊浮动的图片也可以简单定义下，脚本嵌入的 Flash、视频等多媒体内容必要时也需要用   display 属性隐藏掉，并用显示 URL 的方法用文字显示替换内容</p>	</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,129 @@
+@charset "utf-8";
+/*
+Aisainfolinkage All copyright reserved
+Date: 2010.10.15
+Version: v1.0
+Creator: Wulei
+E-mail: wulei@asiainfo-linkage.com
+*/
+/* aibi_panel start */
+.aibi_panel {
+	border:1px solid;
+}
+.aibi_panel .bar_down, .aibi_panel .bar_up{
+	width:16px;
+	height:16px;
+	float:left;
+	margin:7px 5px 7px 0;
+	overflow:hidden;
+}
+.aibi_panel .bar_float_right{
+	float:right;
+	margin-right:0;
+}
+.aibi_panel .bar_down{
+	background:url(../images/aibi_icon.gif) no-repeat 0 0 ; 
+}
+.aibi_panel .bar_down:hover{
+	background:url(../images/aibi_icon.gif) no-repeat -50px 0 ; 
+}
+.aibi_panel .bar_up{
+	background:url(../images/aibi_icon.gif) no-repeat 0 -50px ; 
+}
+.aibi_panel .bar_up:hover{
+	background:url(../images/aibi_icon.gif) no-repeat -50px -50px ; 
+}
+.aibi_panel .bar_down_sub, .aibi_panel .bar_up_sub{
+	width:16px;
+	height:16px;
+	float:left;
+	margin:4px 5px 4px 0;
+	overflow:hidden;
+}
+.aibi_panel .bar_down_sub{
+	background:url(../images/aibi_icon.gif) no-repeat 0 -200px ; 
+}
+.aibi_panel .bar_up_sub{
+	background:url(../images/aibi_icon.gif) no-repeat 0 -250px ; 
+}
+.aibi_panel .bar_down_sub:hover, .aibi_panel .bar_up_sub:hover{
+	width:14px;
+	height:14px;
+}
+.aibi_panel .caption_common{
+	padding:0 5px;
+	height:35px;
+	font:bold 12px/30px "宋体";
+}
+.aibi_panel .caption_common_second{
+	height:30px;
+}
+.aibi_panel .caption_sub{
+	padding:0 5px;
+	height:30px;
+	font:bold 12px/30px "宋体";
+}
+.aibi_panel .caption_complex{
+	padding:0 5px;
+	height:30px;
+	font:bold 12px/30px "宋体";
+}
+.aibi_panel .caption_complex_sub{
+	padding:0 5px;
+	height:25px;
+	font: 12px/25px "宋体";
+}
+.aibi_panel .content{
+	padding:5px;
+}
+.aibi_panel .content_complex{
+	padding:0;
+}
+.aibi_panel .tab_caption{
+	height:25px;
+	font: 12px/25px "宋体";
+	float:left;
+	display:inline;
+	margin-top:4px;
+}
+.aibi_panel .tab_caption li{
+	height:25px;
+	border-bottom:none;
+	float:left;
+	display:inline;
+}
+.aibi_panel .tab_caption li a{
+	padding:0 20px;
+	height:100%;
+	float:left;
+	overflow:hidden;
+}
+.aibi_panel .tab_caption li a:hover{
+	line-height:28px;
+}
+.aibi_panel .tab_caption li.on a{
+	font-weight:bold;
+}
+.aibi_panel .tab_caption li.on a:hover{
+	line-height:25px;
+}
+.aibi_panel .box{
+	display:none;
+	padding:0;
+}
+.aibi_panel .content .on{
+	display:block;
+}
+.aibi_panel .part_float_right{
+	float:right;
+	line-height:normal;
+	margin:3px 5px 0;
+}
+.aibi_panel .icon{
+	width:16px;
+	height:16px;
+	float:left;
+	background:#ccc;
+	margin:7px 3px auto 0;
+} 
+/* aibi_panel end */

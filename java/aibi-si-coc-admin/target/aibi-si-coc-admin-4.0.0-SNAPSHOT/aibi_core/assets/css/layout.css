@@ -1,0 +1,313 @@
+@charset "utf-8";
+/*
+Aisainfolinkage All copyright reserved
+Date: 2010.10.15
+Version: v1.0
+Creator: Wulei
+E-mail: wulei@asiainfo-linkage.com
+*/
+/* 单列layout start */
+.aibi_area_operation {/* 查询条件，操作区域 */
+	margin:0 5px;
+}
+.aibi_area_data {/* 数据显示区域 */
+	margin:5px 5px 0;
+}
+.aibi_col_2_main {
+	width:100%;
+}
+/* 单列layout end */
+/* 双列start，co_2l代表2列 */
+.aibi_col_2_main .col_left {
+	width:20%;
+	float:left;
+	display:inline;
+	height:100%;
+}
+.aibi_col_2_main .col_right {
+	width:80%;
+	float:right;
+}
+.aibi_col_2_main .col_right .aibi_area_operation {
+	margin:0px;
+}
+.aibi_col_2_main .col_right .aibi_area_data {
+	margin:5px 0 0 0px;
+}
+.aibi_col_2_main .col_right .area_main {
+	margin-left:10px;
+}
+.aibi_col_2_sub .col_left {
+	display:inline;
+	float:left;
+	height:100%;
+	width:20%;
+}
+.aibi_col_2_sub .col_right {
+	display:inline;
+	float:right;
+	height:100%;
+	width:79%;
+}
+.aibi_col_2_average {
+	margin-bottom:10px;
+}
+.aibi_col_2_average .col_left {
+	float:left;
+	width:50%;
+	display:inline;
+}
+.aibi_col_2_average .col_right {
+	float:right;
+	width:49.9%;
+	display:inline;
+}
+.aibi_col_2_average .col_left .main {
+	margin-right:5px;
+}
+.aibi_col_2_average .col_right .main {
+	margin-left:5px;
+}
+.aibi_col_2_3_7 {/* 2代表2列，3代表左侧列占30% ，7代表右侧占70% */
+	margin-bottom:10px;
+}
+.aibi_col_2_3_7 .col_left {
+	float:left;
+	width:30%;
+	display:inline;
+}
+.aibi_col_2_3_7 .col_right {
+	float:right;
+	width:70%;
+	display:inline;
+}
+.aibi_col_2_3_7 .col_right .main {
+	margin-left:10px;
+}
+/* 双列end */
+/* 三行布局start */
+.aibi_row_3 .row_top {
+	margin:0;
+}
+.aibi_row_3 .row_middle {
+	margin:5px 0 0;
+}
+.aibi_row_3 .row_bottom {
+	margin:5px 0 0;
+}
+/* 三行布局start */
+/* 复杂布局，行+列 start */
+.aibi_complex_1 .row {
+	margin:0;
+}
+.aibi_complex_1 .col_left {
+	width:40%;
+	float:left;
+	display:inline;
+	margin-top:5px;
+}
+.aibi_complex_1 .col_left .main {
+	margin:5px;
+	padding:5px;
+	border:1px solid #ccc;
+}
+.aibi_complex_1 .col_right {
+	width:59.5%;
+	float:right;
+	display:inline;
+	margin-top:5px;
+}
+.aibi_complex_1 .col_right button {
+	padding:0 5px;
+	margin:0 3px;
+}
+/* 复杂布局，行+列 end */
+/* aibi_layout_Classic start */
+.aibi_layout_Classic {
+	width:100%;
+	height:100%;
+	display: inline-block;
+}
+.aibi_layout_Classic:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.aibi_layout_Classic .col_side {
+	height:100%;
+	float:left;
+	display:inline;
+	overflow:hidden;
+}
+.aibi_layout_Classic_coat{
+	_width:99%;
+	height:100%;
+	border:1px solid #ccc;
+	overflow:auto;
+}
+.aibi_layout_Classic .col_extra {
+	width:12px;
+	height:100%;
+	float:left;
+	overflow:hidden;
+	cursor:pointer;
+	background:#eee;
+}
+*html .aibi_layout_Classic .col_extra {
+	margin-right:-3px;
+}
+.aibi_layout_Classic .col_main {
+	height:100%;
+}
+*html .aibi_layout_Classic .col_main {
+	zoom:1;
+	margin-left:0px;
+}
+.aibi_layout_Classic .col_extra .bar_left {
+	width:12px;
+	height:100%;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -20px center no-repeat;
+}
+.aibi_layout_Classic .col_extra .bar_right {
+	width:12px;
+	height:100%;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -70px center no-repeat;
+}
+/* aibi_layout_Classic end */
+/* aibi_layout_Classic_hover start */
+.aibi_layout_Classic_hover {
+	width:100%;
+	height:100%;
+	display:inline;
+}
+.aibi_layout_Classic_hover .col_hover_bar {
+	width:12px;
+	float:left;
+	display:inline;
+	height:100%;
+	position:relative;
+	z-index:99;
+	cursor:pointer;
+	border-right:1px solid #ccc;
+}
+.aibi_layout_Classic_hover .col_hover_bar_on {
+	background:#eee;
+	width:12px;
+	float:left;
+	display:inline;
+	border-right:1px solid #999;
+}
+.aibi_layout_Classic_hover .col_hover_bar_hover {
+	background:#f7f7f7;
+}
+*html .aibi_layout_Classic_hover .col_hover_bar {
+	margin-right:-3px;
+}
+.aibi_layout_Classic_hover .col_hover_side {
+	width:200px;
+	height:100%;
+	position:absolute;
+	left:12px;
+	bottom:0;
+	background:#fff;
+	z-index:100;
+	overflow:hidden;
+	filter:alpha(opacity=95); /* IE */
+	-moz-opacity:0.95;        /* Moz + FF */
+	opacity: 0.95;           /* 支持CSS3的浏览器（FF 1.5也支持）*/
+}
+.aibi_layout_Classic_hover .col_hover_side_hack{
+	height:100%;
+	position:absolute;
+	left:12px;
+	bottom:0;
+	z-index:90;
+	overflow:hidden;
+	display:none;
+	filter:alpha(opacity=50); /* IE */
+	-moz-opacity:0.5;        /* Moz + FF */
+	opacity: 0.5;           /* 支持CSS3的浏览器（FF 1.5也支持）*/
+}
+.aibi_layout_Classic_hover .col_hover_side_hack iframe{
+	width:100%;
+	height:100%;
+}
+.aibi_layout_Classic_hover .col_hover_main {
+	margin-left:13px;
+	_margin-left:11px;
+	height:100%;
+}
+.aibi_layout_Classic_hover .hided {
+	/*display:none;*/
+	width:0;
+}
+.aibi_layout_Classic_hover .bar_hover_left {
+	width:12px;
+	height:100%;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -20px 25% no-repeat;
+}
+.aibi_layout_Classic_hover .bar_hover_right {
+	width:12px;
+	height:100%;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -70px 25% no-repeat;
+}
+/* aibi_layout_Classic_hover end */
+/* aibi_tree_search start */
+.aibi_tree_search{
+	height:25px;
+	border:1px solid #ccc;
+	border-bottom-color:#999;
+	background:url(../skins/default/images/aibi_panel.gif) 0 -100px repeat-x;
+}
+.aibi_tree_search p{
+	padding-top:3px;
+	white-space:nowrap;
+}
+.aibi_tree_search_input_txt{
+	width:70%px;
+	height:15px;
+	border:1px solid #999;
+	border-right-color:#ccc;
+	border-bottom-color:#ccc;
+	vertical-align:top;
+	*vertical-align:middle;
+	_vertical-align:middle;
+	margin-left:5px;
+}
+.aibi_tree_search_input_txt:hover{
+	background:#ffc;
+}
+.aibi_tree_search_btn, .aibi_tree_search_reset{
+	width:16px;
+	height:17px;
+	line-height:17px;
+	overflow:hidden;
+	font-weight:bold;
+	border:1px solid #999;
+	border-left-color:#fff;
+	display:inline-block;
+	vertical-align:baseline;
+	*vertical-align:middle;
+	_vertical-align:middle;
+	text-decoration:none;
+	background: url(../images/aibi_icon.gif) -300px -200px repeat-x;
+}
+.aibi_tree_search_reset{
+	background-position: -350px -200px;
+}
+.aibi_tree_search_btn:hover{
+	background-position: -316px -200px;
+}
+.aibi_tree_search_reset:hover{
+	background-position: -366px -200px;
+}
+/* aibi_tree_search end */

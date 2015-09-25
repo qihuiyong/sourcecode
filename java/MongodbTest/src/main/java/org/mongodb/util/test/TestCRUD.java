@@ -1,5 +1,7 @@
 package org.mongodb.util.test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import org.bson.BsonDocument;
@@ -20,7 +22,7 @@ import com.mongodb.client.QueryBuilder;
 public class TestCRUD extends MongodbCommon {
 	private static long start_ss;
 
-//    @Test
+	// @Test
 	public void testInsert() {
 		MongoClient client = this.getDefauClient();
 		TestCRUD q = new TestCRUD();
@@ -34,108 +36,65 @@ public class TestCRUD extends MongodbCommon {
 		client.close();
 	}
 
-	/**
-	 * 多条件 或(or) 查询
-	 *  //比较符    
-225.        //"$gt"： 大于    
-226.        //"$gte"：大于等于    
-227.        //"$lt"： 小于    
-       //"$lte"：小于等于    
-      //"$in"： 包含  
+//	@Test
+	public void testMuiltInsert() {
+		MongoClient client = this.getDefauClient();
+		Document doc1 = new Document("name", "QHY")
+				.append("type", "database")
+				.append("size", 13)
+				.append("info",
+						new Document("user", "test").append("password",
+								"testpwd"));
 
-	 */
+		Document doc2 = new Document("name", "QHY22")
+				.append("type", "database")
+				.append("size", 22)
+				.append("info",
+						new Document("user", "qihy").append("password",
+								"pwdqhy"));
+
+		Document doc3 = new Document("name", "22HY")
+				.append("type", "database")
+				.append("size", 122)
+				.append("info",
+						new Document("user", "qihuiyong").append("password",
+								"huiyongq"));
+
+		Document doc4 = new Document("name", "23QHY3434")
+				.append("type", "database")
+				.append("size", 56)
+				.append("info",
+						new Document("user", "qihy7").append("password",
+								"pwdqhy7"));
+
+		Document doc5 = new Document("name", "QH2223Y")
+				.append("type", "message")
+				.append("size", 12)
+				.append("info",
+						new Document("user", "qih2y9").append("password",
+								"pwdqhy9"));
+		List<Document> list = new ArrayList<Document>();
+		list.add(doc1);
+		list.add(doc2);
+		list.add(doc3);
+		list.add(doc4);
+		list.add(doc5);
+		this.insertMuiltDocument(list, client);
+		client.close();
+	}
+
 	@Test
-	public void testMuiltOrQuery() {
+	public void testQueryAll() {
 		MongoClient client = this.getDefauClient();
-		BasicDBObject dbObj = new BasicDBObject();
-		dbObj.put("size", new BasicDBObject("$gt", 8));
-		dbObj.put("size", new BasicDBObject("$lt", 10));
 		MongoCollection<Document> coll = this.getCollection(client);
-		FindIterable<Document> itrDoc = coll.find(dbObj);
-		MongoCursor<Document> mongoCursor = itrDoc.iterator();
-		int count = 0;
-		while (mongoCursor.hasNext()) {
-			Document doc = mongoCursor.next();
-			System.out.println(doc);
-			count++;
+		MongoCursor<Document> docItr = coll.find().iterator();
+		long count = coll.count();
+		System.out.println("总数:" + count);
+		while (docItr.hasNext()) {
+			Document d = docItr.next();
+			System.out.println("doc====>" + d);
 		}
-		System.out.println("OR匹配一共查到："+count+"个文档");
-		client.close();
 	}
-	
-	/**
-	 * 多条件 且(and ) 查询
-	 */
-	@Test
-	public void testMuiltAndQuery() {
-		MongoClient client = this.getDefauClient();
-		BasicDBObject dbObj = new BasicDBObject();
-		BasicDBObject andQuery = new BasicDBObject("$gt", 8).append("$lt", 10);//条件
-		dbObj.put("size", andQuery);
-		MongoCollection<Document> coll = this.getCollection(client);
-		FindIterable<Document> itrDoc = coll.find(dbObj);
-		MongoCursor<Document> mongoCursor = itrDoc.iterator();
-		int count = 0;
-		while (mongoCursor.hasNext()) {
-			Document doc = mongoCursor.next();
-			System.out.println(doc);
-			count++;
-		}
-		System.out.println("AND匹配一共查到："+count+"个文档");
-		client.close();
-	}
-	
-	/**
-	 * 字段=匹配
-	 */
-	@Test
-	public void testFieldQuery() {
-		MongoClient client = this.getDefauClient();
-		BsonDocument filterDoc = new BsonDocument();
-		filterDoc.append("name", new BsonString("MYSQL3"));
-		MongoCollection<Document> coll = this.getCollection(client);
-		FindIterable<Document> itrDoc = coll.find(filterDoc);
-		MongoCursor<Document> mongoCursor = itrDoc.iterator();
-		int count = 0;
-		while (mongoCursor.hasNext()) {
-			Document doc = mongoCursor.next();
-			System.out.println(doc);
-			count++;
-		}
-		System.out.println("count查到："+count+"个文档");
-		client.close();
-	}
-	
-	/**
-	 * count查询
-	 */
-	@Test
-	public void testQueryCount() {
-		MongoClient client = this.getDefauClient();
-		BsonDocument filterDoc = new BsonDocument();
-		filterDoc.append("name", new BsonString("MYSQL3"));
-		MongoCollection<Document> coll = this.getCollection(client);
-		long count = coll.count(filterDoc);
-		System.out.println("一共查到："+count+"个文档");
-		client.close();
-	}
-	
-	/**
-	 * 模糊查询
-	 */
-	@Test
-	public void testQueryLike() {
-		MongoClient client = this.getDefauClient();
-//		BsonDocument filterDoc = new BsonDocument();
-		Pattern pattern =Pattern.compile("^MYSQL3$");
-		BasicDBObject query = new BasicDBObject("name", pattern);
-		
-		MongoCollection<Document> coll = this.getCollection(client);
-		long count = coll.count(query);
-		System.out.println("like查询一共查到："+count+"个文档");
-		client.close();
-	}
-	
 
 	@Before
 	public void beforeM() {
@@ -145,7 +104,7 @@ public class TestCRUD extends MongodbCommon {
 	@After
 	public void afterM() {
 		long end_ss = System.currentTimeMillis();
-		System.out.println("耗时>>>>: " + (end_ss - start_ss)+" MS");
+		System.out.println("耗时>>>>: " + (end_ss - start_ss) + " MS");
 	}
 
 }

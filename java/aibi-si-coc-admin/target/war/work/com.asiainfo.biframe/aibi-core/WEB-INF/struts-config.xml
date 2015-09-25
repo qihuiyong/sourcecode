@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    
+    <!-- ========== Data Source Configuration =============================== -->
+    <data-sources />
+    
+    <!-- ========== Form Bean Definitions ================================== -->
+    <form-beans />
+    
+    <!-- ========== Global Exception Definitions ============================== -->
+    <global-exceptions />
+    <!-- ========== Global Forward Definitions =============================== -->
+    <global-forwards />
+    
+    <!-- ========== Action Mapping Definitions =============================== -->
+    <action-mappings />
+
+    <!-- ========== Controller Configuration ================================ -->
+    <controller />
+    
+    <!-- ========== Message Resources Definitions ============================ -->
+    <message-resources key="aibi_admin" parameter="config.aibi_admin.admin-appresources" null="false"></message-resources>
+    <message-resources key="aibi_chart" parameter="config.aibi_chart.chart-appresources" null="false"></message-resources>
+    <message-resources key="aibi_core" parameter="config.aibi_core.core-appresources" null="false"></message-resources>
+    <message-resources key="aibi_dataProvider" parameter="config.aibi_dataProvider.dataProvider-appresources" null="false"></message-resources>
+    <message-resources key="aibi_dimTable" parameter="config.aibi_dimTable.dimTable-appresources" null="false"></message-resources>
+    <message-resources key="aibi_favor" parameter="config.aibi_favor.favor-appresources" null="false"></message-resources>
+    <message-resources key="aibi_message" parameter="config.aibi_message.message-appresources" null="false"></message-resources>
+    <message-resources key="aibi_operReview" parameter="config.aibi_operReview.operReview-appresources" null="false"></message-resources>    
+    <message-resources key="aibi_privilege" parameter="config.aibi_privilege.privilege-appresources" null="false"></message-resources>    
+    <message-resources key="aibi_pageComponent" parameter="config.aibi_pageComponent.pageComponent-appresources" null="false"></message-resources>
+    <message-resources key="aibi_selfQuery" parameter="config.aibi_selfQuery.selfQuery-appresources" null="false"></message-resources> 
+    <message-resources key="aibi_task" parameter="config.aibi_task.task-appresources" null="false"></message-resources>    
+    <message-resources key="aibi_logAdmin" parameter="config.aibi_logAdmin.logAdmin-appresources" null="false"></message-resources>
+    <message-resources key="aibi_waterMark" parameter="config.aibi_waterMark.waterMark-appresources" null="false"></message-resources>
+    <!-- ========== Plug Ins Configuration ================================= -->
+
+</struts-config>
+

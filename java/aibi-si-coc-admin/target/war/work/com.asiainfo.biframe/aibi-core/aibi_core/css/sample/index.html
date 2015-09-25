@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+
+<!--   首页页面的样式   单独写在页面  不计入css的规范范畴之内  -->
+
+<style type="text/css">
+<!--     
+.tf {font-family: "宋体"; font-size: 12px; color:#122158}
+.lf {font-family: "宋体"; font-size: 12px; color:#122158;font-weight: bold;}
+.STYLE1 {font-family: "宋体"; font-size: 12px; line-height: 21px; font-weight: bold; }
+.bf {      
+      font-family:"宋体";
+	  font-size:12px;
+	  line-height:21px;
+	  color:#000000;
+}
+.bf a{     
+      font-family:"宋体";
+	  font-size:12px;
+	  line-height:21px;
+	  text-decoration:none;
+	  color:#000000;
+}
+.bf a:hover{     
+      font-family:"宋体";
+	  font-size:12px;
+	  line-height:21px;
+	  color:#FF0000;
+	  text-decoration:none;
+}
+.menu_title {}
+.sec_menu {border-left:1px solid white; border-right:1px solid white; border-bottom:1px solid white; overflow:hidden; background:#F2F7FC; }
+
+table  { border:0px; }
+td  { font:normal 12px 宋体; }
+img  { vertical-align:bottom; border:0px; }
+a  { font:normal 12px 宋体; color:#000000; text-decoration:none; }
+a:hover  { color:#428EFF;text-decoration:underline; }
+.sec_menu  { border-left:1px solid white; border-right:1px solid white; border-bottom:1px solid white; overflow:hidden; background:#F2F7FC; }
+.menu_title  { }
+.menu_title span  { position:relative; top:2px; left:8px; color:#000000; font-weight:bold; }
+.menu_title2  { }
+.menu_title2 span  { position:relative; top:2px; left:8px; color:#428EFF; font-weight:bold; }
+
+-->
+</style>
+
+
+<script language=javascript>
+function showsubmenu(sid)
+{
+whichEl = eval("submenu" + sid);
+imgmenu = eval("imgmenu" + sid);
+if (whichEl.style.display == "none")
+{
+eval("submenu" + sid + ".style.display=\"\";");
+imgmenu.background="images/delete_22.gif";
+}
+else
+{
+eval("submenu" + sid + ".style.display=\"none\";");
+imgmenu.background="../default/images/delete_22.gif";
+}
+}
+
+top.document.title="亚信css样式模板"; 
+</script>
+</head>
+
+<body style="margin:0">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="../default/images/banner_03.gif">
+  <tr>
+    <td width="14%"><img src="../default/images/banner_01.jpg" width="176" height="49" alt="" /></td>
+    <td width="53%"><img src="../default/images/banner_02.gif" width="337" height="49" alt="" /></td>
+    <td width="33%"><img src="../default/images/banner_04.gif" width="414" height="49" alt="" /></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="151"><table width="150" height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#F2F7FC">
+      <tr>
+        <td><a href="main.html" target="content" onfocus="this.blur();"><img src="../default/images/delete_02.gif" width="150" height="38" border="0" /></a></td>
+        <td width="1"  height="39"align="right" background="../default/images/Location_24.jpg"></td>
+      </tr>
+      <tr>
+        <td width="150" align="center" valign="top">
+		    <table width="130" align="center" cellpadding="0" cellspacing="0" bgcolor="#F2F7FC">
+               <tr>
+                <td width="130" height="34" background="../default/images/delete_22.gif" class="menu_title" id="imgmenu1" style="cursor:hand" onclick="showsubmenu(1)" onmouseover="this.className='menu_title2';" onmouseout="this.className='menu_title';">&nbsp;<a href="base.html" target="content" onfocus="this.blur();"><span>基本样式 </span></a>               </td>
+              </tr>
+              <tr>
+                <td class="menu_title" id="imgmenu2" onmouseover="this.className='menu_title2';" onclick="showsubmenu(2)" onmouseout="this.className='menu_title';" style="cursor:hand" background="../default/images/delete_22.gif" height="34">&nbsp;<span>模块样式</span> </td>
+              </tr>
+              <tr>
+                <td id="submenu2" style="DISPLAY: none">
+			      <div class="sec_menu" style="WIDTH: 130px">
+                     <div align="center">
+                        <table width="120" align="center" cellpadding="0" cellspacing="0">
+                         <tr>
+                           <td width="31" align="center"><img src="../default/images/delete_37.gif" width="17" height="14" alt="" /></td>
+                          <td width="102" height="25"><a href="template/layout/layout2.html" target="content" onfocus="this.blur();">布局1</a></td>
+                         </tr>
+                         <tr>
+                          <td align="center"><img src="../default/images/delete_30.gif" width="17" height="14" alt="" /></td>
+                           <td height="25"><a href="template/layout/layout3.html" target="content" onfocus="this.blur();">布局2</a></td>
+                        </tr>
+                        <tr>
+                           <td align="center"><img src="../default/images/delete_39.gif" width="17" height="14" alt="" /></td>
+                           <td height="25"><a href="template/layout/layout4.html" target="content" onfocus="this.blur();">布局3</a></td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+                <br />
+            </td>
+          </tr>
+          <tr>
+            <td class="menu_title" id="imgmenu3" onmouseover="this.className='menu_title3';" onclick="showsubmenu(3)" onmouseout="this.className='menu_title';" style="cursor:hand" background="../default/images/delete_22.gif" height="34">&nbsp;<span>面板样式</span></td>
+          </tr>
+		  
+		  <tr>
+                <td id="submenu3" style="DISPLAY: none">
+			      <div class="sec_menu" style="WIDTH: 130px">
+                     <div align="center">
+                        <table width="120" align="center" cellpadding="0" cellspacing="0">
+                         <tr>
+                           <td width="31" align="center"><img src="../default/images/delete_37.gif" width="17" height="14" alt="" /></td>
+                          <td width="102" height="25"><a href="panel/panel1.html" target="content" onfocus="this.blur();">默认面板1</a></td>
+                         </tr>
+                         <tr>
+                          <td align="center"><img src="../default/images/delete_30.gif" width="17" height="14" alt="" /></td>
+                           <td height="25"><a href="panel/panel2.html" target="content" onfocus="this.blur();">面板2</a></td>
+                        </tr>
+                      </table>
+                     </div>
+                </div>
+                <br />
+            </td>
+          </tr>
+		  
+		  
+          <tr>
+            <td class="menu_title" id="imgmenu4" onmouseover="this.className='menu_title2';" onclick="showsubmenu(4)" onmouseout="this.className='menu_title';" style="cursor:hand" background="../default/images/delete_22.gif" height="34">&nbsp;<span>表格样式</span></td>
+          </tr>
+          <tr>
+            <td id="submenu4" style="DISPLAY: none" align="center">
+			  <div class="sec_menu" style="WIDTH: 130px">
+                <div align="center">
+                  <table width="120" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="31" align="center"><img src="../default/images/delete_37.gif" width="17" height="14" alt="" /></td>
+                      <td width="102" height="25" align="left"><a href="template/query/querytable.html" target="content" onfocus="this.blur();">查询条件表格</a></td>
+                    </tr>
+                    <tr>
+                      <td align="center"><img src="file:///E|/08年工作日志/324-328交流平台后台页面/exchange/images/delete_30.gif" width="17" height="14" alt="" /></td>
+                      <td height="25" align="left"><a href="template/message/listtable.html" target="content" onfocus="this.blur();"> 列表表格</a></td>
+                    </tr>
+                    <tr>
+                      <td align="center"><img src="../default/images/delete_39.gif" width="17" height="14" alt="" /></td>
+                      <td height="25" align="left"><a href="template/edit/inputtable.html" target="content" onfocus="this.blur();">输入表格</a></td>
+                    </tr>
+					  <tr>
+                      <td align="center"><img src="../default/images/delete_39.gif" width="17" height="14" alt="" /></td>
+                      <td height="25" align="left"><a href="template/info/detailTable.html" target="content" onfocus="this.blur();">详细信息表格</a></td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+                <br />
+            </td>
+          </tr>
+		  
+		  
+          <tr>
+            <td class="menu_title" id="imgmenu5" onmouseover="this.className='menu_title2';" onclick="showsubmenu(5)" onmouseout="this.className='menu_title';" style="cursor:hand" background="../default/images/delete_22.gif" height="34"><a href="form/form.html" target="content" onfocus="this.blur();"><span>表单样式</span></a></td>
+          </tr>
+          <tr>
+            <td class="menu_title" id="imgmenu6" onmouseover="this.className='menu_title2';" onclick="showsubmenu(6)" onmouseout="this.className='menu_title';" style="cursor:hand" background="../default/images/delete_22.gif" height="34"><a href="button/button.html" target="content" onfocus="this.blur();"><span>按钮样式</span></a> </td>
+          </tr>
+          <tr>
+            <td class="menu_title" id="imgmenu7" onmouseover="this.className='menu_title2';" onclick="showsubmenu(7)" onmouseout="this.className='menu_title';" style="cursor:hand" background="../default/images/delete_22.gif" height="34"><a href="menu/navgation.html" target="content" onfocus="this.blur();"><span>菜单样式</span></a> </td>
+          </tr>
+          <tr>
+            <td class="menu_title" id="imgmenu8" onmouseover="this.className='menu_title2';" onclick="showsubmenu(8)" onmouseout="this.className='menu_title';" style="cursor:hand" background="../default/images/delete_22.gif" height="34"><span>选项卡样式</span></td>
+          </tr>
+		  
+		   <tr>
+            <td id="submenu8" style="DISPLAY: none" align="center">
+			  <div class="sec_menu" style="WIDTH: 130px">
+                <div align="center">
+                  <table width="120" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="31" align="center"><img src="../default/images/delete_37.gif" width="17" height="14" alt="" /></td>
+                      <td width="102" height="25" align="left"><a href="tab/tabpage.html" target="content" onfocus="this.blur();">选项卡样式一</a></td>
+                    </tr>
+					 <tr>
+                      <td width="31" align="center"><img src="../default/images/delete_37.gif" width="17" height="14" alt="" /></td>
+                      <td width="102" height="25" align="left"><a href="tab/tabpage2.html" target="content" onfocus="this.blur();">选项卡样式二</a></td>
+                    </tr>
+					  <tr>
+                      <td align="center"><img src="../default/images/delete_39.gif" width="17" height="14" alt="" /></td>
+                      <td height="25" align="left"><a href="tab/slidingDoor.html" target="content" onfocus="this.blur();">选项卡_滑动门</a></td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+                <br />
+            </td>
+          </tr>
+		  
+		  <tr>
+            <td class="menu_title" id="imgmenu9" onmouseover="this.className='menu_title2';" onclick="showsubmenu(9)" onmouseout="this.className='menu_title';" style="cursor:hand" background="../default/images/delete_22.gif" height="34"><a href="tixing.html" target="content" onfocus="this.blur();"><span>提醒页面模板</span></a> </td>
+          </tr>
+		  <tr>
+            <td class="menu_title" id="imgmenu10" onmouseover="this.className='menu_title2';" onclick="showsubmenu(10)" onmouseout="this.className='menu_title';" style="cursor:hand" background="../default/images/delete_22.gif" height="34"><a href="print.html" target="content" onfocus="this.blur();"><span>打印样式</span></a> </td>
+          </tr>
+		  
+          <tr>
+            <td class="menu_title" id="imgmenu11" onmouseover="this.className='menu_title2';" onclick="showsubmenu(11)" onmouseout="this.className='menu_title';" style="cursor:hand" background="../default/images/delete_22.gif" height="34"><a href="icon.html" target="content" onfocus="this.blur();"><span>图标库</span></a> </td>
+          </tr>
+		  
+
+		  
+          <tr>
+            <td height="24" align="center" id="submenu7" style="DISPLAY: none"><br />
+            </td>
+          </tr>
+        </table>
+		</td>
+        <td width="1" height="544" background="../default/images/Location_24.jpg"></td>
+      </tr>
+    </table>
+	</td>
+	<td width="1" bgcolor="#999999"></td>
+    <td width="100%" valign="top">
+	<iframe id="contentFram" name="content"
+		width="100%"
+		height="580"
+		border="0"
+		scrolling="auto"
+		frameborder="0"
+		src="main.html"
+		>	
+	</td>
+  </tr>
+</table>
+
+</body>
+</html>

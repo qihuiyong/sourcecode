@@ -1,0 +1,461 @@
+
+.aibutton {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font: 13px "Helvetica Neue", Helvetica, Arial, clean, sans-serif !important;
+	text-decoration: none !important;
+	/*text-shadow: 1px 1px 2px rgba(0,0,0,0.20); */
+	background: none;
+	border: none;
+	white-space: nowrap;
+	cursor: pointer;
+	user-select: none;
+	-moz-user-select: none;
+	
+	/* Fix extra width padding in IE */
+	_width: 0;
+	overflow: visible;
+	margin-right:5px;
+}
+
+.aibutton span {
+	display: block;						/* Prevents :active from working in IE--oh well! */
+	height: 23px;
+	padding-right: 12px;
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.aibutton span span {
+	padding-right: 0;
+	padding-left: 12px;
+	line-height: 24px;
+	background-position: left top;
+}
+
+.aibutton span span span {
+	padding-left: 21px;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: left center;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _background-image: none;		Or just hide icons from the undeserving IE6 */
+	/* _padding-left: 0;					Or just hide icons from the undeserving IE6 */
+}
+
+.aibutton span span span.after {
+	padding-left: 0px;
+	padding-right: 21px;
+	background-position: right center;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _padding-right: 0;					Or just hide icons from the undeserving IE6 */
+}
+
+.aibutton[disabled],
+.aibutton[disabled]:hover,
+.aibutton[disabled]:focus,
+.aibutton[disabled]:active,
+.aibutton.disabled,
+.aibutton.disabled:hover,
+.aibutton.disabled:focus,
+.aibutton.disabled:active {
+	color: #333 !important;
+	cursor: inherit;
+	text-shadow: none; 
+	opacity: 0.33;
+}
+
+.aibutton:hover span,
+.aibutton:focus span {
+	background-position: 100% -23px;
+}
+
+.aibutton:hover span span,
+.aibutton:focus span span {
+	background-position: 0% -23px;
+}
+
+.aibutton:active span {
+	background-position: 100% -46px;
+}
+
+.aibutton:active span span {
+	background-position: 0% -46px;
+}
+
+.aibutton[disabled] span,
+.aibutton.disabled span {
+	background-position: 100% -69px;
+}
+
+.aibutton[disabled] span span,
+.aibutton.disabled span span {
+	background-position: 0% -69px;
+}
+
+.aibutton:hover span span span,
+.aibutton:focus span span span,
+.aibutton:active span span span,
+.aibutton[disabled] span span span,
+.aibutton.disabled span span span {
+	background-position: left center;
+}
+
+.aibutton:hover span span span.after,
+.aibutton:focus span span span.after,
+.aibutton:active span span span.after,
+.aibutton[disabled] span span span.after,
+.aibutton.disabled span span span.after {
+	background-position: right center;
+}
+
+.aibutton img {
+	margin-right: 5px;
+	vertical-align: text-top;
+	/* IE6 Hack */
+	_margin-top: 4px;
+	_vertical-align: text-bottom;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _display: none;		Or just hide icons from the undeserving IE6 */
+}
+
+.aibutton img.after {
+	margin-right: 0;
+	margin-left: 5px;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _margin-left: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+.aibutton.sexymedium	{ font-size: 15px !important; }
+.aibutton.sexylarge	{ font-size: 18px !important; }
+
+
+/*
+ * Button Skins
+ * 
+ * .PNG background images with alpha transparency are also supplied if you'd rather use them instead of the 
+ * default .GIF images. (Just beware of IE6's lack of support.) 
+ * 
+ * Additional skins can be added below. The images/skins/ButtonTemplate.psd can be used to create new skins.
+ * Prefix the skin name with "sexy" to avoid any potential conflicts with other class names. 
+ */
+
+/* Silver Button Skin (the default skin) */
+
+.aibutton,
+.aibutton.sexysilver {
+	color: #666 !important;
+}
+	
+.aibutton:hover,
+.aibutton:focus,
+.aibutton.sexysilver:hover,
+.aibutton.sexysilver:focus {
+	color: #333 !important;
+}
+	
+.aibutton span,
+.aibutton.sexysilver span {
+	background-image: url(../images/skins/silver/button_right.gif);
+}
+
+.aibutton span span,
+.aibutton.sexysilver span span {
+	background-image: url(../images/skins/silver/button_left.gif);
+}
+
+/* Orange Button Skin */
+
+.aibutton.sexyorange,
+.aibutton.sexyorange:hover,
+.aibutton.sexyorange:focus {
+	color: white !important;
+}
+	
+.aibutton.sexyorange[disabled],
+.aibutton.sexyorange[disabled]:hover,
+.aibutton.sexyorange[disabled]:active,
+.aibutton.sexyorange[disabled]:focus,
+.aibutton.sexyorange.disabled,
+.aibutton.sexyorange.disabled:hover,
+.aibutton.sexyorange.disabled:active,
+.aibutton.sexyorange.disabled:focus {
+	color: #333 !important;
+}
+	
+.aibutton.sexyorange span {
+	background-image: url(../images/skins/orange/button_right.gif);
+}
+
+.aibutton.sexyorange span span {
+	background-image: url(../images/skins/orange/button_left.gif);
+}
+
+/* Red Button Skin */
+
+.aibutton.sexyred,
+.aibutton.sexyred:hover,
+.aibutton.sexyred:focus {
+	color: white !important;
+}
+	
+.aibutton.sexyred[disabled],
+.aibutton.sexyred[disabled]:hover,
+.aibutton.sexyred[disabled]:active,
+.aibutton.sexyred[disabled]:focus,
+.aibutton.sexyred.disabled,
+.aibutton.sexyred.disabled:hover,
+.aibutton.sexyred.disabled:active,
+.aibutton.sexyred.disabled:focus {
+	color: #333 !important;
+}
+	
+.aibutton.sexyred span {
+	background-image: url(../images/skins/red/button_right.gif);
+}
+
+.aibutton.sexyred span span {
+	background-image: url(../images/skins/red/button_left.gif);
+}
+
+/* Blue Button Skin */
+
+.aibutton.sexyblue,
+.aibutton.sexyblue:hover,
+.aibutton.sexyblue:focus {
+	color: white !important;
+}
+	
+.aibutton.sexyblue[disabled],
+.aibutton.sexyblue[disabled]:hover,
+.aibutton.sexyblue[disabled]:active,
+.aibutton.sexyblue[disabled]:focus,
+.aibutton.sexyblue.disabled,
+.aibutton.sexyblue.disabled:hover,
+.aibutton.sexyblue.disabled:active,
+.aibutton.sexyblue.disabled:focus {
+	color: #333 !important;
+}
+	
+.aibutton.sexyblue span {
+	background-image: url(../images/skins/blue/button_right.gif);
+}
+
+.aibutton.sexyblue span span {
+	background-image: url(../images/skins/blue/button_left.gif);
+}
+
+
+
+/* Yellow Button Skin */
+
+.aibutton.sexyyellow,
+.aibutton.sexyyellow:hover,
+.aibutton.sexyyellow:focus {
+	color: #994800 !important;
+}
+	
+.aibutton.sexyyellow span {
+	background-image: url(../images/skins/yellow/button_right.gif);
+}
+
+.aibutton.sexyyellow span span {
+	background-image: url(../images/skins/yellow/button_left.gif);
+}
+
+
+/* 
+ * Simple Skin Buttons
+ */
+
+.aibutton.sexysimple { 
+	position: relative; 
+	padding: 3px 10px 3px;
+	font: inherit;
+	font-size: 13px !important;
+	font-style: normal !important; 
+	font-weight: bold !important; 
+	color: #fff !important;
+	line-height: 1; 
+	background-image: url(../images/skins/simple/awesome-overlay-sprite.png);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	
+	/* Special effects */
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25); 
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5); 
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	
+	/* IE only stuff */
+	border-bottom: 1px solid transparent\9;
+	_background-image: none;
+	
+	/* Cross browser inline block hack - http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/ */
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline !important;
+	position: relative;
+	
+	/* Force hasLayout in IE */
+	zoom: 1;
+	
+	/* Disable text selection (Firefox only)*/
+	-moz-user-select: none;
+}
+
+.aibutton.sexysimple::selection {
+	background: transparent;
+}
+
+.aibutton.sexysimple:hover,
+.aibutton.sexysimple:focus {
+	background-position: 0 -50px; 
+	color: #fff !important;
+}
+
+.aibutton.sexysimple:active { 
+	background-position: 0 -100px; 
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7); 
+	/* Unfortunately, Safari doesn't support inset yet */
+	-webkit-box-shadow: none;
+	
+	/* IE only stuff */
+	border-bottom: 0\9;
+	border-top: 1px solid #666\9;
+}
+
+.aibutton.sexysimple[disabled], 
+.aibutton.sexysimple.disabled { 
+	background-position: 0 -150px; 
+	color: #333 !important;
+	text-shadow: none; 
+}
+
+.aibutton.sexysimple[disabled]:hover,
+.aibutton.sexysimple[disabled]:focus,
+.aibutton.sexysimple[disabled]:active,
+.aibutton.sexysimple.disabled:hover,
+.aibutton.sexysimple.disabled:focus,
+.aibutton.sexysimple.disabled:active {
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5); 
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+} 
+
+.aibutton.sexysimple span {
+	height: auto;
+	padding-left: 24px;
+	padding-right: 0;
+	background-position: left center;
+	background-repeat: no-repeat;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _padding-left: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+.aibutton.sexysimple span.after {
+	padding-left: 0;
+	padding-right: 24px;
+	background-position: right center;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _padding-right: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+/* Simple button colors */
+.aibutton.sexysimple					{ background-color: #333; }		/* Default */
+.aibutton.sexysimple.sexyblack		{ background-color: #333; }
+.aibutton.sexysimple.sexyred		{ background-color: #a90118; }
+.aibutton.sexysimple.sexyorange	{ background-color: #ff8a00; }
+.aibutton.sexysimple.sexyyellow	{ background-color: #ffb515; }
+.aibutton.sexysimple.sexygreen		{ background-color: #59a901; }
+.aibutton.sexysimple.sexyblue		{ background-color: #015ea9; }
+.aibutton.sexysimple.sexyteal		{ background-color: #2daebf; }
+.aibutton.sexysimple.sexymagenta	{ background-color: #a9014b; }
+.aibutton.sexysimple.sexypurple	{ background-color: #9d01a9; }
+
+/* Simple button sizes */
+.aibutton.sexysimple.sexysmall          { padding: 4px 7px 5px; font-size: 10px !important; }
+.aibutton.sexysimple.sexysmall:active   { padding: 5px 7px 4px; }
+.aibutton.sexysimple                    { /* default */ }
+.aibutton.sexysimple:active             { padding: 6px 10px 4px; }
+.aibutton.sexysimple.sexymedium         { /* default */ }
+.aibutton.sexysimple.sexymedium:active  { padding: 6px 10px 4px; }
+.aibutton.sexysimple.sexylarge          { padding: 8px 14px 8px; font-size: 14px !important; }
+.aibutton.sexysimple.sexylarge:active   { padding: 9px 14px 7px; }
+.aibutton.sexysimple.sexyxl             { padding: 8px 14px 8px; font-size: 16px !important; }
+.aibutton.sexysimple.sexyxl:active      { padding: 9px 14px 7px; }
+.aibutton.sexysimple.sexyxxl            { padding: 8px 14px 8px; font-size: 20px !important; }
+.aibutton.sexysimple.sexyxxl:active     { padding: 9px 14px 7px; }
+.aibutton.sexysimple.sexyxxxl           { padding: 8px 14px 8px; font-size: 26px !important; }
+.aibutton.sexysimple.sexyxxxl:active    { padding: 9px 14px 7px; }
+
+.aibutton.sexysimple.sexysmall[disabled]:active,
+.aibutton.sexysimple.sexysmall.disabled:active   	{ padding: 4px 7px 5px; }
+.aibutton.sexysimple[disabled]:active,
+.aibutton.sexysimple.disabled:active 	            { padding: 5px 10px 5px; }
+.aibutton.sexysimple.sexymedium[disabled]:active,
+.aibutton.sexysimple.sexymedium.disabled:active 		{ padding: 6px 10px 4px; }
+.aibutton.sexysimple.sexylarge[disabled]:active,
+.aibutton.sexysimple.sexylarge.disabled:active   	{ padding: 8px 14px 8px; }
+.aibutton.sexysimple.sexyxl[disabled]:active,
+.aibutton.sexysimple.sexyxl.disabled:active	      { padding: 8px 14px 8px; }
+.aibutton.sexysimple.sexyxxl[disabled]:active,
+.aibutton.sexysimple.sexyxxl.disabled:active 		   { padding: 8px 14px 8px; }
+.aibutton.sexysimple.sexyxxxl[disabled]:active,
+.aibutton.sexysimple.sexyxxxl.disabled:active    	{ padding: 8px 14px 8px; }
+
+
+/*
+ * Icon Definitions
+ */
+
+/* Silk Icons - http://www.famfamfam.com/lab/icons/silk/ */
+/* (Obviously not all Silk icons are defined here. Feel free to define any other icons that you may need.) */
+
+.aibutton span.ok				{ background-image: url(../images/icons/silk/tick.gif) !important; }
+.aibutton span.cancel			{ background-image: url(../images/icons/silk/cross.gif) !important; }
+.aibutton span.add			{ background-image: url(../images/icons/silk/add.gif) !important; }
+.aibutton span.delete			{ background-image: url(../images/icons/silk/delete.gif) !important; }
+.aibutton span.download		{ background-image: url(../images/icons/silk/arrow_down.gif) !important; }
+.aibutton span.download2		{ background-image: url(../images/icons/silk/package_down.gif) !important; }
+.aibutton span.upload			{ background-image: url(../images/icons/silk/arrow_up.gif) !important; }
+.aibutton span.search			{ background-image: url(../images/icons/silk/magnifier.gif) !important; }
+.aibutton span.find			{ background-image: url(../images/icons/silk/find.gif) !important; }
+.aibutton span.first			{ background-image: url(../images/icons/silk/resultset_first.gif) !important; }
+.aibutton span.prev			{ background-image: url(../images/icons/silk/resultset_previous.gif) !important; }
+.aibutton span.next			{ background-image: url(../images/icons/silk/resultset_next.gif) !important; }
+.aibutton span.last			{ background-image: url(../images/icons/silk/resultset_last.gif) !important; }
+.aibutton span.play			{ background-image: url(../images/icons/silk/play_blue.gif) !important; }
+.aibutton span.pause			{ background-image: url(../images/icons/silk/pause_blue.gif) !important; }
+.aibutton span.rewind			{ background-image: url(../images/icons/silk/rewind_blue.gif) !important; }
+.aibutton span.forward		{ background-image: url(../images/icons/silk/forward_blue.gif) !important; }
+.aibutton span.stop			{ background-image: url(../images/icons/silk/stop_blue.gif) !important; }
+.aibutton span.reload			{ background-image: url(../images/icons/silk/reload.gif) !important; }
+.aibutton span.sync			{ background-image: url(../images/icons/silk/arrow_refresh.gif) !important; }
+.aibutton span.save			{ background-image: url(../images/icons/silk/disk.gif) !important; }
+.aibutton span.email			{ background-image: url(../images/icons/silk/email.gif) !important; }
+.aibutton span.print			{ background-image: url(../images/icons/silk/printer.gif) !important; }
+.aibutton span.heart			{ background-image: url(../images/icons/silk/heart.gif) !important; }
+.aibutton span.like			{ background-image: url(../images/icons/silk/thumb_up.gif) !important; }
+.aibutton span.dislike		{ background-image: url(../images/icons/silk/thumb_down.gif) !important; }
+.aibutton span.accept			{ background-image: url(../images/icons/silk/accept.gif) !important; }
+.aibutton span.decline		{ background-image: url(../images/icons/silk/decline.gif) !important; }
+.aibutton span.help			{ background-image: url(../images/icons/silk/help.gif) !important; }
+.aibutton span.home			{ background-image: url(../images/icons/silk/house.gif) !important; }
+.aibutton span.info			{ background-image: url(../images/icons/silk/information.gif) !important; }
+.aibutton span.cut			{ background-image: url(../images/icons/silk/cut.gif) !important; }
+.aibutton span.copy			{ background-image: url(../images/icons/silk/page_white_copy.gif) !important; }
+.aibutton span.paste			{ background-image: url(../images/icons/silk/paste_plain.gif) !important; }
+.aibutton span.erase			{ background-image: url(../images/icons/silk/erase.gif) !important; }
+.aibutton span.undo			{ background-image: url(../images/icons/silk/arrow_undo.gif) !important; }
+.aibutton span.redo			{ background-image: url(../images/icons/silk/arrow_redo.gif) !important; }
+.aibutton span.edit			{ background-image: url(../images/icons/silk/pencil.gif) !important; }
+.aibutton span.calendar		{ background-image: url(../images/icons/silk/date.gif) !important; }
+.aibutton span.user			{ background-image: url(../images/icons/silk/user.gif) !important; }
+.aibutton span.settings		{ background-image: url(../images/icons/silk/cog.gif) !important; }
+.aibutton span.cart			{ background-image: url(../images/icons/silk/cart.gif) !important; }
+.aibutton span.wand			{ background-image: url(../images/icons/silk/wand.gif) !important; }
+.aibutton span.wrench			{ background-image: url(../images/icons/silk/wrench.gif) !important; }

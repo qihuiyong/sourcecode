@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* 
+Aisainfolinkage All copyright reserved
+Date: 2010.10.18
+Version: v1.0
+Creator: Wulei
+E-mail: wulei@asiainfo-linkage.com
+ */
+/* aibi_accordion start */
+.aibi_accordion {
+	border:1px solid;
+	border-top:none;
+	height:100%;
+	overflow:hidden;
+}
+.aibi_accordion .caption, .aibi_accordion .on {
+	height:29px;
+	line-height:29px;
+	cursor:pointer;
+	overflow:hidden;
+}
+.aibi_accordion .caption h6 {
+	height:29px;
+	padding-left:10px;
+	font:bold 12px/29px "宋体";
+}
+.aibi_accordion .caption .bar {
+	width:16px;
+	height:16px;
+	float:right;
+	margin:7px;
+	background:url(../images/aibi_icon.gif) 0 -250px no-repeat;
+}
+.aibi_accordion .on .bar {
+	width:16px;
+	height:16px;
+	float:right;
+	margin:7px;
+	background:url(../images/aibi_icon.gif) 0 -200px no-repeat;
+}
+.aibi_accordion .content {
+	padding:5px 0;
+	border-top:none;
+	display:none;
+}
+.aibi_accordion .content_on {
+	display:block;
+}
+.aibi_accordion .content .main {
+	height:100%;
+	overflow:auto;
+}
+/* aibi_accordion end */
+
+/* aibi_accordion_2 start */
+.aibi_accordion_2 {
+	border:1px solid;
+	border-top:none;
+	/*height:100%;*/
+	overflow:hidden;
+}
+.aibi_accordion_2 .caption, .aibi_accordion_2 .on {
+	height:29px;
+	line-height:29px;
+	cursor:pointer;
+	overflow:hidden;
+}
+.aibi_accordion_2 .caption h6 {
+	height:29px;
+	padding-left:10px;
+	font:bold 12px/29px "宋体";
+}
+.aibi_accordion_2 .caption .bar {
+	width:16px;
+	height:16px;
+	float:right;
+	margin:7px;
+	background:url(../images/aibi_icon.gif) -400px -300px no-repeat;
+}
+.aibi_accordion_2 .on .bar {
+	width:16px;
+	height:16px;
+	float:right;
+	margin:7px;
+	background:url(../images/aibi_icon.gif) -400px -350px no-repeat;
+}
+.aibi_accordion_2 .content {
+	padding:5px 0;
+	overflow:hidden;
+}
+.aibi_accordion_2 .content p{
+	line-height:20px;
+	margin:5px 10px;
+}
+/* aibi_accordion end */

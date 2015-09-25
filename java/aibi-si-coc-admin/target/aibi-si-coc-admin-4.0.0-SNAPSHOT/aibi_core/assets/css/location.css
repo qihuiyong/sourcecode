@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* 
+Aisainfolinkage All copyright reserved
+Date: 2010.10.20
+Version: v1.0
+Creator: Wulei
+E-mail: wulei@asiainfo-linkage.com
+ */
+ 
+/* location start */
+.aibi_loaction {
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+}
+.aibi_loaction span, .aibi_loaction a{
+	margin:0 5px;
+}
+.aibi_loaction span.info{
+	font-weight:bold;
+}
+/* location end */

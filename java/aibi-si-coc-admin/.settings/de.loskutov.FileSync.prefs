@@ -1,0 +1,7 @@
+WARNING=DO NOT MODIFY THIS FILE IF YOU DON'T UNDERSTAND
+defaultDestination=
+defaultVariables=
+eclipse.preferences.version=1
+includeTeamPrivateFiles=false
+map|0=target/classes/com|D\:/work/SVN/COC-4.0/app/aibi-si-parent/aibi-si-coc-admin/target/aibi-si-coc-admin-4.0.0-SNAPSHOT/WEB-INF/classes/com|,|,|,
+useCurrentDateForDestinationFiles=false

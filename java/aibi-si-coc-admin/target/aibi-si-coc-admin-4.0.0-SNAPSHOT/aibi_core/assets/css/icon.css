@@ -1,0 +1,356 @@
+@charset "utf-8";
+/*
+Aisainfolinkage All copyright reserved
+Date: 2010.10.18
+Version: v1.0
+Creator: Wulei
+E-mail: wulei@asiainfo-linkage.com
+*/
+.aibi_icon_close {/* 关闭样式1 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) 0 -350px no-repeat;
+}
+.aibi_icon_notice {/* 注意 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) 0 -300px no-repeat;
+}
+.aibi_icon_rank {/* 排行 */
+	width:16px;
+	height:16px;
+	font:normal 10px/16px Verdana;
+	display:inline-block;
+	float:left;
+	margin-top:4px;
+	overflow:hidden;
+	text-align:center;
+	background:url(../images/aibi_icon.gif) -50px -200px no-repeat;
+}
+.aibi_icon_rank_orange {/* 橘黄色排行图标 */
+	width:16px;
+	height:16px;
+	color:#fff;
+	font:normal 10px/16px Verdana;
+	display:inline-block;
+	float:left;
+	margin-top:4px;
+	overflow:hidden;
+	text-align:center;
+	background:url(../images/aibi_icon.gif) -50px -250px no-repeat;
+}
+.aibi_icon_mail {/* 电子邮箱 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -300px -150px no-repeat;
+}
+.aibi_icon_increase {/* 上升图标 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -100px -50px no-repeat;
+}
+.aibi_icon_decrease {/* 下降图标 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -100px -100px no-repeat;
+}
+.aibi_icon_analysis {/* 分析图标 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -300px -50px no-repeat;
+}
+.aibi_icon_save {/* 保存 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -150px -50px no-repeat;
+}
+.aibi_icon_file {/* 文件 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -150px -100px no-repeat;
+}
+.aibi_icon_file_modify {/* 编辑文件 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -150px -150px no-repeat;
+}
+.aibi_icon_keyboard {/* 键盘 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -150px -200px no-repeat;
+}
+.aibi_icon_layout {/* 布局 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -150px -250px no-repeat;
+}
+.aibi_icon_light {/* 灯 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -150px -300px no-repeat;
+}
+.aibi_icon_trend {/* 趋势图 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -150px -350px no-repeat;
+}
+.aibi_icon_medal {/* 勋章 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -200px 0 no-repeat;
+}
+.aibi_icon_computer {/* 电脑 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -200px -50px no-repeat;
+}
+.aibi_icon_mouse {/* 鼠标 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -200px -100px no-repeat;
+}
+.aibi_icon_new {/* 新的 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -200px -150px no-repeat;
+}
+.aibi_icon_bookmarks {/* 书签 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -200px -200px no-repeat;
+}
+.aibi_icon_text {/* 文本 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -200px -250px no-repeat;
+}
+.aibi_icon_mobilephone {/* 移动电话 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -200px -300px no-repeat;
+}
+.aibi_icon_pen {/* 笔 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -200px -350px no-repeat;
+}
+.aibi_icon_identity {/* 身份 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -250px 0 no-repeat;
+}
+.aibi_icon_earth {/* 地球 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -250px -50px no-repeat;
+}
+.aibi_icon_window {/* 窗口 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -250px -100px no-repeat;
+}
+.aibi_icon_histogram {/* 柱状图 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -250px -150px no-repeat;
+}
+.aibi_icon_tree {/* 树状图 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -250px -200px no-repeat;
+}
+.aibi_icon_clock {/* 时钟 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -250px -250px no-repeat;
+}
+.aibi_icon_gold {/* 金币 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -250px -300px no-repeat;
+}
+.aibi_icon_data {/* 数据 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -250px -350px no-repeat;
+}
+.aibi_icon_disk {/* 磁盘 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -100px -150px no-repeat;
+}
+.aibi_icon_flag_red {/* 红旗 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -100px -150px no-repeat;
+}
+.aibi_icon_flag_red {/* 红旗 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -100px -200px no-repeat;
+}
+.aibi_icon_flag_yellow {/* 黄旗 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -100px -250px no-repeat;
+}
+.aibi_icon_flag_green {/* 绿旗 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -100px -300px no-repeat;
+}
+.aibi_icon_flag_blue {/* 蓝旗 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -100px -350px no-repeat;
+}
+.aibi_icon_flag_find {/* 查找 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -300px 0 no-repeat;
+}
+.aibi_icon_help {/* 问题 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -300px -100px no-repeat;
+}
+.aibi_alarm_red{/* 红色警告 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -300px -250px no-repeat;
+}
+.aibi_alarm_red_disabled{/* 红色警告失效 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -350px -250px no-repeat;
+}
+.aibi_alarm_yellow{/* 黄色警告 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -300px -300px no-repeat;
+}
+.aibi_alarm_yellow_disabled{/* 黄色警告失效 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -350px -300px no-repeat;
+}
+.aibi_alarm_green{/* 绿色警告 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -300px -350px no-repeat;
+}
+.aibi_alarm_green_disabled{/* 绿色警告失效 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -350px -350px no-repeat;
+}
+.aibi_alarm_blue{/* 绿色警告 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -400px -250px no-repeat;
+}
+.aibi_alarm_blue_disabled{/* 绿色警告失效 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -450px -250px no-repeat;
+}
+.aibi_input_slide{/* 输入框下拉图标 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) 0 -384px no-repeat;
+}
+.aibi_icon_modify{/* 修改 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -484px -250px no-repeat;
+}
+.aibi_icon_publish{/* 发布 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -484px -300px no-repeat;
+}
+.aibi_icon_delete_secondary{/* 删除 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -484px -350px no-repeat;
+}
+.aibi_icon_locked{/* 锁头 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -484px -200px no-repeat;
+}
+.aibi_icon_recover{/* 回收 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -484px -400px no-repeat;
+}
+.aibi_icon_empower{/* 赋权 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -484px -450px no-repeat;
+}
+.aibi_icon_push{/* 推送 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -484px -500px no-repeat;
+}
+.aibi_icon_star{/* 星 */
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/aibi_icon.gif) -484px -550px no-repeat;
+}
+

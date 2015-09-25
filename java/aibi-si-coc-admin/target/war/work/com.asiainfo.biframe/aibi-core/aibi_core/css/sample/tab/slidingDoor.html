@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="../../default/css/base.css" type="text/css" rel="stylesheet" />
+<link href="../../default/css/tab.css" type="text/css" rel="stylesheet" />
+<title>tab选项卡</title>
+<style>
+.clearfix { 
+clear: both; 
+visibility: hidden; 
+}
+</style>
+
+<!--  滑动门选项卡 js-->
+<script language=javascript>
+    function secBoard(n)
+    {
+       for(i=0;i<menu.childNodes.length;i++)
+       menu.childNodes[i].className="sec1";
+       menu.childNodes[n].className="sec2";
+ 
+       for(i=0;i<main.childNodes.length;i++)
+       main.childNodes[i].style.display="none";
+       main.childNodes[n].style.display="block";
+ 
+    }
+</script>
+
+  <div id="tabHeader">
+     <ul id="menu">
+        <li onMouseOver="secBoard(0)" class="sec2">最新新闻</li>
+        <li onMouseOver="secBoard(1)" class="sec1">最新文章</li>
+        <li onMouseOver="secBoard(2)" class="sec1">最新日志</li>
+        <li onMouseOver="secBoard(3)" class="sec1">论坛新帖</li>
+    </ul>
+  <!--内容显示区域-->
+     <ul id="main">
+        <li class="block">第一个内容</li>
+        <li class="unblock">第二个内容</li>
+        <li class="unblock">第三个内容</li>
+        <li class="unblock">第四个内容</li>
+    </ul>
+  <!--内容显示区域-->
+</div>
+
+</body>
+</html>

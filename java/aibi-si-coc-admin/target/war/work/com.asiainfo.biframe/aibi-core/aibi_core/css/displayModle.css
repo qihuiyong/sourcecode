@@ -1,0 +1,147 @@
+<style type="text/css">
+body {
+	font-family:"verdana"; 
+	font-size: 10pt;
+}
+UNKNOWN {
+	FONT-SIZE: 10pt; FONT-FAMILY: "verdana"
+}
+tr {font-family:"verdana"; font-size: 10pt}
+input {font-family:"verdana"; font-size: 10pt}
+button {font-family:"verdana"; font-size: 10pt}
+a:link { text-decoration: none;}        
+a:active { text-decoration:blink}       
+a:hover { text-decoration:underline;}   
+a:visited { text-decoration: none;}
+a:hover { text-decoration:underline;}   
+
+body {
+	SCROLLBAR-FACE-COLOR: #B9D3FF;
+	SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF;
+	SCROLLBAR-SHADOW-COLOR:#184AD7;
+	SCROLLBAR-3DLIGHT-COLOR: #E6EEFC;
+	SCROLLBAR-ARROW-COLOR:#000000;
+	SCROLLBAR-TRACK-COLOR: #e6e6e6;
+	}
+.style1 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style2 {font-size: 10pt}
+.style3 {color: #993366}
+.style4 {color: #0033FF}
+.style41 {color: #993300}
+.style5 {color: #0171d7}
+.style7 {
+	color: #FFFFFF;
+	font-size: 10pt;
+}
+.style8 {
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.styleSeg1 {
+	color: #3d1ffd;
+	font-weight: bold;
+	font-size: 12px;
+}
+.styleSeg2 {
+	color: #0172da;
+	font-size: 12;
+	font-weight: bold;
+}
+.styleSeg3 {	font-size: 12px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.styleSeg5 {color: #0172da; font-size: 12px; font-weight: bold; }
+.styleSeg6 {font-size: 12px}
+.menu1 {
+	font-size: 12px;
+	color: #B900B8;
+}
+.menu2 {
+	font-size: 12px;
+	color: #0000FF;
+}
+.menupage {
+	font-size: 12px;
+	color: #061F60;
+}
+.css1 {
+	font-family: "Arial";
+	font-size: 12px;
+	font-style: normal;
+	line-height: 28px;
+	color: #000000;
+}
+
+
+.cssBold {
+	font-family: "Arial";
+	font-size: 12px;
+	font-style: normal;
+	line-height: 28px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.list {
+	font-family: "Arial";
+	font-size: 9pt;
+	line-height: 18pt 
+}
+
+.tab {
+	width:				100px;
+	height:				20px;
+	background-image:	url( "/images/bgimg/tab.png" );
+	
+	position:		relative;
+	top:			0;
+	display:		inline;
+	float:			left;
+	overflow:		hidden;
+	
+	cursor:			Default;
+ 
+	margin:			1px -1px 1px 2px;
+	padding:		2px 0px 0px 0px;
+	border:			0;
+
+	z-index:		1;
+	font:			12px Tahoma;
+	font-weight:	bold;
+	white-space:	nowrap;
+	text-align:		center;
+}
+
+.tab-pane {
+	position:	relative;
+	width:		100%;		/* width needed weird IE bug */
+	margin-right:	-2px;	/* to make room for the shadow */
+}
+
+.boldfont {
+	font-family: "Arial";
+	font-size: 14px;
+	font-weight: bold;
+}
+#topmain /* Override above rule for IE */
+   {
+    width:100%;
+	position: absolute; 
+    top: expression(offsetParent.scrollTop + 1); 
+    LEFT:0px;
+	z-index:2;
+}
+
+#topmain0 /* Override above rule for IE */
+   {
+    width:100%;
+	position: absolute; 
+    top: expression(offsetParent.scrollTop + 0); 
+    LEFT:0px;
+	z-index:1;
+}
+</style>

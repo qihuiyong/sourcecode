@@ -1,0 +1,42 @@
+﻿/**************defaultTable 的caption的兼容性************************/
+#wrapper { width: 120px; } /* FireFox */ 
+*html #wrapper { width: 80px;} /* ie6 fixed */ 
+*+html #wrapper { width: 60px;} /* ie7 fixed, 注意顺序 */ 
+
+
+caption{
+      height:20px; 
+      font-weight:bold;
+      padding-left:5px;
+	  padding-right:5px;
+	  padding-top:5px;
+      text-align:left;
+      background:url(../images/querytable.jpg);
+	  border:1px solid #99BBE8;
+	  border-collapse:collapse;
+	  margin:0 auto;
+}
+*htm caption{
+      height:20px; 
+      font-weight:bold;
+      padding-left:5px;
+	  padding-right:5px;
+	  padding-top:5px;
+      text-align:left;
+      background:url(../images/querytable.jpg);
+	  border:1px solid #99BBE8;
+	  border-collapse:collapse;
+	  margin:0 auto;
+}
+*+html caption{
+      height:20px; 
+      font-weight:bold;
+      padding-left:5px;
+	  padding-right:5px;
+	  padding-top:5px;
+      text-align:left;
+      background:url(../images/querytable.jpg);
+	  border:1px solid #99BBE8;
+	  border-collapse:collapse;
+	  margin:0 auto;
+}
