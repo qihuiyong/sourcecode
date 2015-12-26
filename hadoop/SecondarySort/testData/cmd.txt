@@ -1,0 +1,3 @@
+运行jar
+输出目录要不存在
+hadoop jar SecondarySort.jar /testData/secondrySort.txt /testOut/secondary2
