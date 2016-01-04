@@ -3,12 +3,14 @@ package org.qhy.nio.server;
 import java.io.IOException;  
 import java.net.InetSocketAddress;  
 import java.nio.ByteBuffer;  
+import java.nio.IntBuffer;
 import java.nio.channels.SelectionKey;  
 import java.nio.channels.Selector;  
 import java.nio.channels.ServerSocketChannel;  
 import java.nio.channels.SocketChannel;  
 import java.nio.channels.spi.SelectorProvider;  
 import java.util.Iterator;  
+import java.util.concurrent.Callable;
   
 /**    
  * TCP/IP的NIO非阻塞方式   
@@ -160,18 +162,36 @@ public class Server implements Runnable {
         }  
     }  
   
-    public static void main(String[] args) {  
-//        Server server = new Server();  
-//        Thread thread = new Thread(server);  
-//        thread.start();  
-    	String[] mobileArray = new String[]{"ww","eee","tttt"};
-    	StringBuffer values = new StringBuffer();
-    	for (String value : mobileArray) {
-			values.append("'").append(value).append("',");
-		}
-		values.deleteCharAt((values.length()-1));
-		System.out.println(values.toString());
-		values.delete(0, (values.length()));
-		System.out.println(values.toString());
+    public static void main(String[] args) {
+        IntBuffer intBuffer = IntBuffer.allocate(5);
+        int size=5;
+        for (int i = 0; i < size; i++) {
+            intBuffer.put((i+(Integer.MAX_VALUE-300)));
+        }
+        System.out.println("intBuffer.position()>>>"+intBuffer.position());
+        intBuffer.flip();
+        System.out.println("intBuffer.position()>>>"+intBuffer.position());
+        
+        while(intBuffer.hasRemaining()){
+            System.out.println("while.position()>>>"+intBuffer.position());
+            System.out.println(intBuffer.get());
+        }
+        Runnable runable = new Runnable() {
+            
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                
+            }
+        };
+        Callable<Integer> callble = new Callable<Integer>() {
+
+            @Override
+            public Integer call() throws Exception {
+                // TODO Auto-generated method stub
+                return null;
+            }
+        };
+//        System.out.println(intBuffer);
     }  
 }  
