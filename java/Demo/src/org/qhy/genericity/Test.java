@@ -18,6 +18,7 @@ public class Test {
         
         System.out.println(sub.getT1());
         System.out.println(sub.getClazz(89));
+        int[] aa =new int[10];
     }
 
 }

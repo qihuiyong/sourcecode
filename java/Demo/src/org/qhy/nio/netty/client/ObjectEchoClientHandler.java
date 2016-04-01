@@ -43,6 +43,7 @@ public class ObjectEchoClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
         // Send the first message if this handler is a client-side handler.
+    	System.out.println("发送消息....");
         ctx.writeAndFlush(firstMessage);
     }
 

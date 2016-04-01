@@ -106,11 +106,11 @@ public class SocketServerApp implements Runnable{
 			try {
 				//选择一组键，其相应的通道已为 I/O 操作准备就绪。 
 				this.selector.select();
-				
+				System.out.println("running ... 11111111111");
 				//返回此选择器的已选择键集
 				Iterator<SelectionKey> selectorKeys = this.selector.selectedKeys().iterator();
 				while(selectorKeys.hasNext()){
-					 System.out.println("running2 ... ");
+					 System.out.println("running2 ... 222222222222");
 					 //找到当前键的选择键
 					 SelectionKey key = selectorKeys.next();
 					 //然后将他从返回键队列删除
@@ -120,8 +120,10 @@ public class SocketServerApp implements Runnable{
 					 }
 					 if(key.isAcceptable()){
 						 //如果遇到请求那么就响应  
+					     System.out.println("isAcceptable");
 						 this.accept(key);
 					 }else if(key.isReadable()){
+					     System.out.println("isReadable");
 						 //读取客户端数据
 						 this.read(key);
 					 }

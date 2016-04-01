@@ -34,7 +34,8 @@ public class SocketClient {
 	}
 	public static void main(String[] args) throws IOException {
 		SocketClient client = new SocketClient();
-		client.scaninSubmitToServer("localhost", 9099);
+//		client.scaninSubmitToServer("localhost", 9099); AppServer
+		client.scaninSubmitToServer("localhost", 7765);
 	}
 
 }

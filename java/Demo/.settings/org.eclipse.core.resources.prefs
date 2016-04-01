@@ -1,6 +1,4 @@
 eclipse.preferences.version=1
-encoding//src/org/qhy/nio/client/Client.java=GBK
 encoding//src/org/qhy/nio/client/SocketClient.java=GBK
-encoding//src/org/qhy/nio/server/Server.java=GBK
 encoding//src/org/qhy/nio/server/SocketServerApp.java=GBK
 encoding/<project>=GBK

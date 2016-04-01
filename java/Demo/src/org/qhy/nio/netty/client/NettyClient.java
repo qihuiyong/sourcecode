@@ -14,7 +14,7 @@ import io.netty.handler.codec.serialization.ObjectEncoder;
 public class NettyClient {
 	static final String HOST = "127.0.0.1";
     static final int PORT = 8007;
-    static final int SIZE = 256;
+    static final int SIZE = 3;
 	public static void main(String[] args) throws InterruptedException {
 		 EventLoopGroup group = new NioEventLoopGroup();
 	        try {

@@ -27,12 +27,13 @@ public class ObjectEchoServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         // Echo back the received object to the client.
-    	System.out.println("msg=>>>>>>>"+msg);
+    	System.out.println("接收消息...msg=>>>>>>>"+msg);
         ctx.write(msg);
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) {
+    	System.out.println("接收完毕...m");
         ctx.flush();
     }
 
