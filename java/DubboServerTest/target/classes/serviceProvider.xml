@@ -8,11 +8,13 @@
         ">
 	<dubbo:application name="hello-world-app" />
 	<!-- 本机 伪集群 测试 -->
-	<dubbo:registry protocol="zookeeper"
-		address="192.168.199.139:2181" />
-	<dubbo:protocol name="dubbo" port="20880" />
-	<dubbo:service interface="org.qhy.demo.dubboserver.ITestService"
-		ref="demoService" />       <!-- 和本地bean一样实现服务 -->
+	<dubbo:registry id="default-zookeeper" protocol="zookeeper"
+		address="127.0.0.1:2181" />
+	<dubbo:protocol id="default-protocol" name="dubbo" port="20880" />
 	<bean id="demoService" class="org.qhy.demo.dubboserver.TestServiceImpl" />
+
+	<dubbo:service protocol="default-protocol" registry="default-zookeeper"
+		interface="org.qhy.demo.dubboserver.ITestService" ref="demoService"
+		group="org-qhy-demo" />       <!-- 和本地bean一样实现服务 -->
 </beans>  
  

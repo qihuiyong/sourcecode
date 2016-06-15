@@ -113,6 +113,7 @@
 						</file>
 					</copyfiles>
 				</configuration>
+				<!-- 
 				<executions>
 					<execution>
 						<id>cpfile</id>
@@ -122,6 +123,7 @@
 						</goals>
 					</execution>
 				</executions>
+				 -->
 			</plugin>
 		</plugins>
 	</build>
