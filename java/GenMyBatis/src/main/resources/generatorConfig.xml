@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="D:/mvn_repository/mysql/mysql-connector-java/5.1.30/mysql-connector-java-5.1.30.jar" />
+	<context id="context1" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://115.28.175.87:3306/ship?useUnicode=true&amp;characterEncoding=UTF-8"
+			userId="root" password="1q2w3e4r5t" />
+		<javaModelGenerator targetPackage="com.the4man.cnbdw.model"
+			targetProject="E:\mywork\workspace\ibatis\src\main\java" />
+		<sqlMapGenerator targetPackage="mapping.mysql"
+			targetProject="E:\mywork\workspace\ibatis\src\main\java" />
+		<javaClientGenerator
+			targetPackage="com.the4man.cnbdw.dao"
+            targetProject="E:\mywork\workspace\ibatis\src\main\java" type="XMLMAPPER" />
+		<table schema="ship" tableName="message" />
+		<table schema="ship" tableName="message_record" />
+		<table schema="ship" tableName="message_reply" />
+<!-- 		<table schema="CL_DEMO" tableName="tb_role_user" />
+		<table schema="CL_DEMO" tableName="tb_permission_role" /> -->
+	</context>
+</generatorConfiguration>
