@@ -1,8 +1,6 @@
 
 package org.qhy.genericity;
 
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class Test {
@@ -32,7 +30,6 @@ public class Test {
         
         
         int totalPage = (15 + 13 -1) / 13;
-        System.out.println(totalPage);
     }
 
 }
