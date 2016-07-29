@@ -19,6 +19,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -44,13 +45,24 @@ public class ObjectEchoClientHandler extends ChannelInboundHandlerAdapter {
     public void channelActive(ChannelHandlerContext ctx) {
         // Send the first message if this handler is a client-side handler.
     	System.out.println("发送消息....");
-        ctx.writeAndFlush(firstMessage);
+    	
+    	for (int i = 0; i < Integer.MAX_VALUE; i ++) {
+    		if(i%1000 == 0){
+    			try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+    		}
+    		ctx.writeAndFlush(firstMessage);
+        }
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         // Echo back the received object to the server.
-        ctx.write(msg);
+//        ctx.write(msg);
+    	System.out.println("客户端_MSG>>>"+msg);
     }
 
     @Override

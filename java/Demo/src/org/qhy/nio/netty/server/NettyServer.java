@@ -1,6 +1,7 @@
 package org.qhy.nio.netty.server;
 
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.EventLoopGroup;
@@ -34,7 +35,10 @@ public class NettyServer {
 									new ObjectEchoServerHandler());
 						}
 					});
-			sbtp.bind(PORT).sync().channel().closeFuture().sync();
+			ChannelFuture future =  sbtp.bind(PORT).sync().channel().closeFuture().sync();
+			if(future.isSuccess()){
+				System.out.println("确定成功");
+			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {

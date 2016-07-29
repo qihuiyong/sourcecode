@@ -1,0 +1,3 @@
+echo1=org.qhy.spi.impl.Echo1
+echo2=org.qhy.spi.impl.Echo2
+echo3=org.qhy.spi.impl.Echo3
