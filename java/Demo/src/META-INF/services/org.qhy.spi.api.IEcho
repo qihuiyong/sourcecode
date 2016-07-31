@@ -1,3 +1,4 @@
 echo1=org.qhy.spi.impl.Echo1
 echo2=org.qhy.spi.impl.Echo2
-echo3=org.qhy.spi.impl.Echo3
+#echo3=org.qhy.spi.impl.Echo3
+#exe=org.qhy.spi.impl.Execute2

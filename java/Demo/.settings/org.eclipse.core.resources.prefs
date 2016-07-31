@@ -3,4 +3,5 @@ encoding//src/org/qhy/QuikSort.java=UTF-8
 encoding//src/org/qhy/nio/client/SocketClient.java=GBK
 encoding//src/org/qhy/nio/server/SocketServerApp.java=GBK
 encoding//src/org/qhy/oom/PermSizeTest.java=UTF-8
+encoding//src/org/qhy/spi/api/IEcho.java=UTF-8
 encoding/<project>=GBK

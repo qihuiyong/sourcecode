@@ -1,6 +1,8 @@
 package org.qhy.spi;
 
 import org.qhy.spi.api.IEcho;
+import org.qhy.spi.impl.Echo1;
+import org.qhy.spi.pkg.anonation.SPI;
 import org.qhy.spi.pkg.internal.ExtensionServiceLoader;
 
 
@@ -8,8 +10,10 @@ public class Test {
 	
 	public static void main(String[] args) throws Exception {
 		ExtensionServiceLoader<IEcho> serviceLoader = ExtensionServiceLoader.getServiceLoader(IEcho.class);
-		IEcho echo =serviceLoader.getServiceInstance("echo2");
-		echo.echo();
+//		IEcho echo =serviceLoader.getServiceInstance("echo");
+		IEcho defaultEcho =serviceLoader.getDefaultInstance();
+//		echo.echo();
+		defaultEcho.echo();
 	}
 
 //	public static void main(String[] args) throws Exception {

@@ -1,12 +1,12 @@
 package org.qhy.spi.api;
+
+import org.qhy.spi.pkg.anonation.SPI;
+
 /**
- * ClassName: org.qhy.spi.api.IEcho <br/>
- * Description: TODO 功能描述. <br/>
- * date: 2016年7月29日 下午2:07:21 <br/>
- * Company: gome
- * @author qihuiyong-ds
- * @version
+ * @author qihuiyong
+ *
  */
+@SPI(value = "echo1")
 public interface IEcho {
 	public void echo();
 }
