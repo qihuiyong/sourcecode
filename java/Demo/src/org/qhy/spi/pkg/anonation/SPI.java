@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Documented
-@Retention(RetentionPolicy.RUNTIME) //反射机制需要保留到运行阶段
+@Retention(RetentionPolicy.RUNTIME) 
 @Target({ElementType.TYPE})
 public @interface SPI {
 	String value();
