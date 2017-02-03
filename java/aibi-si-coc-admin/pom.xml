@@ -3,13 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>com.asiainfo.biapp</groupId>
-		<artifactId>aibi-si-parent</artifactId>
-		<version>4.0.0-SNAPSHOT</version>
-	</parent>
 	<artifactId>aibi-si-coc-admin</artifactId>
-	<name>aibi-si-coc-admin</name>
 	<packaging>war</packaging>
 	<url>http://maven.apache.org</url>
 
@@ -18,89 +12,7 @@
 		<coc.admin.mybatis.version>3.2.8</coc.admin.mybatis.version>
 		<coc.admin.mybatis.spring.version>1.2.3</coc.admin.mybatis.spring.version>
 	</properties>
-	<build>
-		<resources>
-			<resource>
-				<filtering>false</filtering>
-				<directory>${basedir}/src/main/java</directory>
-				<includes>
-					<include>**/*.xml</include>
-					<include>**/*.hbm</include>
-				</includes>
-			</resource>
-			<resource>
-				<filtering>false</filtering>
-				<directory>${basedir}/src/main/resources</directory>
-			</resource>
-			<!-- common-resources -->
-			<resource>
-				<filtering>false</filtering>
-				<directory>${basedir}/../aibi-si-common/src/main/resources</directory>
-			</resource>
-		</resources>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>my-jar</id>
-						<phase>package</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-						<configuration>
-							<classifier>api</classifier>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 	<dependencies>
-
-
-		<dependency>
-			<groupId>com.asiainfo.biapp</groupId>
-			<artifactId>aibi-si-common</artifactId>
-			<version>${project.parent.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>com.asiainfo.biframe</groupId>
-					<artifactId>aibi-alarm</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.sitemesh</groupId>
-					<artifactId>sitemesh</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.mongodb</groupId>
-					<artifactId>mongo-java-driver</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>redis.clients</groupId>
-					<artifactId>jedis</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>net.sf.supercsv</groupId>
-					<artifactId>super-csv</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>com.jcraft</groupId>
-					<artifactId>jsch</artifactId>
-				</exclusion>
-				<!-- 
-				<exclusion>
-					<groupId>commons-net</groupId>
-					<artifactId>commons-net</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-jdbc</artifactId>
-				</exclusion>
-				 -->
-			</exclusions>
-		</dependency>
 		<dependency>
 			<groupId>struts</groupId>
 			<artifactId>struts</artifactId>

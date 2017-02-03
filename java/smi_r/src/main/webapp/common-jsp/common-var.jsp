@@ -1,0 +1,1 @@
+<c:set var="contextPath" scope="session" value="${pageContext.request.contextPath}" />
